@@ -1,13 +1,50 @@
+:root {
+  --primary-color: #567D89; /** nav-bar-color**/
+  --secondary-color: #709F9D;/** jumbotron-color**/
+  --nav-item-color: #A6EAE7;
+  --orange-yellow:#FFAD4D;/** default button color**/
+  --ratings-color: #FFCF26;
+  --page-bkgd-color: #F1ECE0;
+  --light-grey: #CCCCCC;
+  --middle-grey: #9D9D9D;
+  --charcoal: #333333;
+} 
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--charcoal);
+  font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/** Button Styles **/
+
+.btn-default {
+  font-family:  "Roboto", sans-serif;
+  background-color: var(--orange-yellow);
+  font-size: 16px;
+  color: #FFF;
+  border: none;
+  border-radius: 25px;
+  padding:12px 30px;
+  text-align: center;
+  font-weight:400;
+  min-width: 100px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
+
+.btn-default:hover {
+  background-color: var(--primary-color);
+  color: #FFF;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:  0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
