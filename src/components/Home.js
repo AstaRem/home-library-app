@@ -1,10 +1,12 @@
-import React from 'react'
+
+import React from 'react';
 import '../css/Home.css';
 
 
 function Home() {
   return (
     <div>
+
       <div className="jumbotron">
       <div className="container text-center" id="search-button">
 
@@ -19,9 +21,8 @@ function Home() {
 
 
 
-
-
       </div>
+
     </div>
   )
 }

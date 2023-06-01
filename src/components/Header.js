@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../css/Header.css';
 
 function Header() {
@@ -8,18 +8,13 @@ function Header() {
         <div className='navbar'>
             <div className='container'>
                 <h3 className='logo'>Shelf</h3>
-
                 <ul className='nav-links'>
-
                     <li className='nav-item'>
-                        <Link to='/Home'>Home</Link>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>Home</NavLink>
                     </li>
-
                     <li className='nav-item'>
-                        <Link to='/BooksOnLoan'>On Loan</Link>
+                    <NavLink to="BooksOnLoan" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>On Loan</NavLink>
                     </li>
-
-
                 </ul>
 
             </div>
