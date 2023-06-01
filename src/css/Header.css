@@ -1,0 +1,29 @@
+
+
+/* Navbar */
+
+.navbar {
+  background-color: #567D89;
+  width: 100%;
+}
+
+.logo {
+
+  color: #F0CA43;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+}
+
+.nav-links {
+  color: #A6EAE7;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+
+}
+
+.nav-item {
+
+  margin: right 10px;
+
+}
