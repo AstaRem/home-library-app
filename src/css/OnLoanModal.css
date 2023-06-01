@@ -1,0 +1,24 @@
+
+.OnLoan_book_cover {
+    width: 80px;
+    height: 90px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.book_name {
+    font-weight: bold;
+}
+
+.form-group{
+    display: flex;
+}
+
+.datepicker, .name_of_borrower{
+    margin-right: 20px;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
