@@ -41,7 +41,7 @@ body {
 }
 
 .btn-default:hover {
-  background-color: #303944;
+  background-color: var(--primary-color);
   color: #FFF;
   -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:  0px 2px 8px 0px rgba(50, 50, 50, 0.75);
