@@ -11,9 +11,10 @@ function Home() {
       <div className="container text-center" id="search-button">
 
 <form className="form-center">
-  <input className="form-control" type="text" placeholder="Search" aria-label="Search"/>
+  <input className="form-control search-input" type="text" placeholder="Search" aria-label="Search"/>
   <br></br>
-  <button className="btn btn-primary btn-lg" type="submit">SEARCH</button>
+  <button className="btn-default" type="submit">SEARCH</button>
+  {/* <button className="btn btn-primary btn-lg" type="submit">SEARCH</button> */}
 </form>
 
 

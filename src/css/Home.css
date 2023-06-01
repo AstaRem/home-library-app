@@ -1,6 +1,13 @@
 .jumbotron{
 
-    background-color: #709F9D;
+    background-color: var(--secondary-color) !important;
+
+
+}
+
+.search-input {
+
+width: 200px !important;
 
 
 }
@@ -18,31 +25,5 @@
 
 
 
-.btn{
 
-font-family:  "Roboto", sans-serif;
-  background-color: var(--orange-yellow);
-  font-size: 16px;
-  color: #FFF;
-  border: none;
-  border-radius: 25px;
-  padding:12px 30px;
-  text-align: center;
-  font-weight:400;
-  min-width: 100px;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: var(--primary-color);
-    color: #FFF;
-    -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:  0px 2px 8px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
-  }
-  
   
