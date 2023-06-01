@@ -1,5 +1,4 @@
 import './App.css';
-import BooksOnLoan from './components/BooksOnLoan';
 import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
