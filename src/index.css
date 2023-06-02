@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #567D89; /** nav-bar-color**/
+  --primary-color: #405F69; /** nav-bar-color**/
   --secondary-color: #709F9D;/** jumbotron-color**/
   --nav-item-color: #A6EAE7;
   --orange-yellow:#FFAD4D;/** default button color**/
@@ -8,6 +8,8 @@
   --light-grey: #CCCCCC;
   --middle-grey: #9D9D9D;
   --charcoal: #333333;
+  --disabled_bkgd: #A6A6A6;
+  --disabled_label:#D9D9D9;
 } 
 
 
@@ -29,7 +31,7 @@ body {
   color: #FFF;
   border: none;
   border-radius: 25px;
-  padding:12px 30px;
+  padding:8px 30px;
   text-align: center;
   font-weight:400;
   min-width: 100px;
@@ -38,6 +40,8 @@ body {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .btn-default:hover {
@@ -46,5 +50,21 @@ body {
   -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:  0px 2px 8px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+.btn-default.small {
+  min-width: 70px;
+  width: 70px;
+  height:23px;
+  padding: 0;
+  line-height: 70px;
+}
+
+.btn-default.disabled,
+.btn-default.small.disabled {
+  background-color: var(--disabled_bkgd);
+  color:var(--disabled_label);
+  cursor: default;
+  pointer-events: none;
 }
 
