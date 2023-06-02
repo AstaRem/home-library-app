@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #405F69; /** nav-bar-color**/
+  --primary-color: #567D89; /** nav-bar-color**/
   --secondary-color: #709F9D;/** jumbotron-color**/
   --nav-item-color: #A6EAE7;
   --orange-yellow:#FFAD4D;/** default button color**/
@@ -31,7 +31,7 @@ body {
   color: #FFF;
   border: none;
   border-radius: 25px;
-  padding:8px 30px;
+  padding:12px 30px;
   text-align: center;
   font-weight:400;
   min-width: 100px;

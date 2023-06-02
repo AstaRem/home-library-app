@@ -2,6 +2,10 @@
     background-color: var(--secondary-color) !important;
 }
 
+.search-input {
+width: 200px !important;
+}
+
 .hero-banner {
     padding: 60px 20px;
 }
