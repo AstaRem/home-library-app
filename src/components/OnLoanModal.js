@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../css/OnLoanModal.css'
+import '../css/OnLoanModal.css';
+import ChooseDate from './ChooseDate';
+
 
 function OnLoan (props){
 
@@ -31,7 +33,8 @@ function OnLoan (props){
                 <form>
                     <div className="form-group">
                       <label htmlFor="datepicker" className="datepicker">Date of borrow:</label>
-                      <input type="email" className="form-control" id="datepicker" placeholder="Datepicker" />
+                      {/* <input type="email" className="form-control" id="datepicker" placeholder="Datepicker" /> */}
+                      <ChooseDate />
                     </div>
                     <div className="form-group">
                       <label htmlFor="name_of_borrower" className="name_of_borrower">Borrower:</label>
