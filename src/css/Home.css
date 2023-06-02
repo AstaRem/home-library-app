@@ -1,32 +1,27 @@
 .jumbotron{
+
     background-color: var(--secondary-color) !important;
+
+
 }
 
-.hero-banner {
-    padding: 60px 20px;
+.search-input {
+
+width: 200px !important;
+
+
 }
 
-.row_input {
-    justify-content: center;
-    align-items: center;
+/* .form-center {
+
+    text-align: center;
+} */
+/* 
+.form-control  {
+
+    text-align: center;
 }
-
-#home_search_input {
-    width:40% !important;
-    border-radius: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-input::placeholder {
-    color: var( --middle-grey) !important;
-}
-
-#home_form_book_search_btn {
-    margin-top: 20px;
-}
-
-
+ */
 
 
 
