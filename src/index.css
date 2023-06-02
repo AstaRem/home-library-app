@@ -8,6 +8,8 @@
   --light-grey: #CCCCCC;
   --middle-grey: #9D9D9D;
   --charcoal: #333333;
+  --disabled_bkgd: #A6A6A6;
+  --disabled_label:#D9D9D9;
 } 
 
 
@@ -38,13 +40,32 @@ body {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .btn-default:hover {
   background-color: var(--primary-color);
   color: #FFF;
+  text-shadow: 1px 1px 1px #000;
   -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:  0px 2px 8px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+.btn-default.small {
+  min-width: 70px;
+  width: 70px;
+  height:23px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.btn-default.disabled,
+.btn-default.small.disabled {
+  background-color: var(--disabled_bkgd);
+  color:var(--disabled_label);
+  cursor: default;
+  pointer-events: none;
 }
 

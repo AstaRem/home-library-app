@@ -1,0 +1,83 @@
+[
+    {
+      "id":1,
+      "title": "Hack Your Hormones",
+      "author": "Davinia Taylor",
+      "cover": "https://books.google.com/books/content?id=LdQtzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "date_borrowed": "01/03/2023",
+      "borrower": "Jack"
+    },
+    {
+      "id":2,
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "cover": "https://books.google.com/books/content?id=8U2oAAAAQBAJ&printsec=frontcover&img=0&zoom=1&edge=curl&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Emma"
+    },
+    {
+      "id":3,
+      "title": "Hack Your Hormones",
+      "author": "Davinia Taylor",
+      "cover": "https://books.google.com/books/content?id=LdQtzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Liam"
+    },
+    {
+      "id":4,
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "cover": "https://books.google.com/books/content?id=8U2oAAAAQBAJ&printsec=frontcover&img=0&zoom=1&edge=curl&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Ava"
+    },
+    {
+      "id":5,
+      "title": "Hack Your Hormones",
+      "author": "Davinia Taylor",
+      "cover": "https://books.google.com/books/content?id=LdQtzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Mia"
+    },
+    {
+      "id":6,
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "cover": "https://books.google.com/books/content?id=8U2oAAAAQBAJ&printsec=frontcover&img=0&zoom=1&edge=curl&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Ethan"
+    },
+    {
+      "id":7,
+      "title": "Hack Your Hormones",
+      "author": "Davinia Taylor",
+      "cover": "https://books.google.com/books/content?id=LdQtzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Lily"
+    },
+    {
+      "id":8,
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "cover": "https://books.google.com/books/content?id=8U2oAAAAQBAJ&printsec=frontcover&img=0&zoom=1&edge=curl&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Ella"
+    },
+    {
+      "id":9,
+      "title": "Hack Your Hormones",
+      "author": "Davinia Taylor",
+      "cover": "https://books.google.com/books/content?id=LdQtzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Lucas"
+    },
+    {
+      "id":10,
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "cover": "https://books.google.com/books/content?id=8U2oAAAAQBAJ&printsec=frontcover&img=0&zoom=1&edge=curl&source=gbs_api",
+      "date_borrowed": "12/03/2023",
+      "borrower": "Noah"
+    }
+
+  ]
