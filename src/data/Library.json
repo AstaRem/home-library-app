@@ -1,6 +1,19 @@
 [
 
     {
+        "id":"phKbzgEACAAJ",
+        "title":"The Man Who Died Twice",
+        "author":"Richard Osman",
+        "ISBN":"0241988241",
+        "description":"It’s the following Thursday. Elizabeth has received a letter from an old colleague, a man with whom she has a long history. He’s made a bi…",
+        "read":"No",
+        "ratings":"/5",
+        "opinion":"",
+        "cover":"http://books.google.com/books/content?id=phKbzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "borrower":"",
+        "date_of_borrow":""
+    },
+    {
         "id":"HksgDQAAQBAJ",
         "title":"The Maid",
         "author":"Nita Prose",
@@ -77,7 +90,7 @@
         "date_of_borrow": ""
        
     },
-
+    
     {
         "id":"T3upDwAAQBAJ",
         "title":"The Boy, The Mole, The Fox and The Horse",

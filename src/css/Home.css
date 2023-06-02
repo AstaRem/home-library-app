@@ -34,6 +34,10 @@ input::placeholder {
     padding: 40px 20px;
 }
 
+.section_library .container {
+    background-color: #FFF;
+}
+
 .home_btn_wrapper {
     display: flex;
     justify-content: flex-end;

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import BookCard from './BookCard';
 import OnLoan from './OnLoanModal';
-import allBooks from '../data/all_books_demo.json';
+import allBooks from '../data/Library.json';
 import '../css/Home.css';
-
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
+
+  const navigate = useNavigate();
 
   const [bookList, setBooks] = useState(allBooks);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -27,11 +29,11 @@ const Home = () => {
           </form>
         </div>
       </section>
-     
       <section className="section_library">
       <div className="container">
       <div className="home_btn_wrapper">
-        <button type="button" className="btn-default">Add New Book</button>
+      <button type="button" className="btn-default" onClick={() => {navigate("/AddNewBook");
+        }}>Add New Book</button>
       </div>
         <div className="row no-gutters">
           {bookList.map((book) => (
