@@ -15,6 +15,9 @@ function Header() {
                     <li className='nav-item'>
                     <NavLink to="BooksOnLoan" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>On Loan</NavLink>
                     </li>
+                    <li className='nav-item'>
+                    <NavLink to="AddNewBook" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>AddNewBook</NavLink>
+                    </li>
                 </ul>
             </div>
 
