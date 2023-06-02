@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import ContentWrapper from './ContentWrapper';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +7,26 @@ import '../css/AddNewBook.css';
 
 
 const AddNewBook = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [bookData, setBookData] = useState(null);
+
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(
+        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ`
+      );
+      const data = await response.json();
+      setBookData(data);
+    } catch (error) {
+      console.error('Error searching for books:', error);
+    }
+  };
+
+  useEffect(() => {
+    if (bookData) {
+      console.log('Book Data:', bookData);
+    }
+  }, [bookData]);
 
 
   return (
@@ -23,7 +44,7 @@ const AddNewBook = () => {
           </Col>
           <Col xs={4}>
             {/* Input area */}
-            <Form.Control type="text" placeholder="Enter text" />
+            <Form.Control type="text" id="search-book" placeholder="Book title, author or ISBN" />
           </Col>
           <Col xs={2}>
             {/* Search button */}
