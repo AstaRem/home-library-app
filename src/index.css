@@ -20,6 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--charcoal);
   font-weight: 400;
+  background-color: var(--page-bkgd-color);
 }
 
 /** Button Styles **/
