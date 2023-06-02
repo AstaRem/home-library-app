@@ -1,47 +1,48 @@
 [
 
     {
-        "id":"EN8fzgEACAAJ",
+        "id":"HksgDQAAQBAJ",
         "title":"The Maid",
         "author":"Nita Prose",
         "ISBN":"0008435723",
-        "description":"*THE NO.1 NEW YORK TIMES & SUNDAY TIMES TOP TEN BESTSELLER *WINNER OF THE GOODREADS CHOICE AWARD FOR BEST MYSTERY/THRILLER *WINNER OF TH…",
+        "description":"I know about your secrets. Your dirty laundry. But what do you know about me? Molly the maid is all alone in the world. A nobody.",
         "onloan":"No",
         "read":"Yes",
         "ratings":"4/5",
         "opinion":"Great story",
         "cover":"http://books.google.com/books/content?id=EN8fzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrower":""
+        "borrower":"",
+        "date_of_borrow": ""
        
     },
     {
-        "id":"2ZjHBAAAQBAJ",
-        "title":"Harry Potter and the Philosopher's Stone",
-        "author":"J. K. Rowling",
-        "ISBN":"1408855652",
-        "description": "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed i…",
+        "id":"Pc3mrQEACAAJ",
+        "title":"Big Little Lies",
+        "author":"Liane Moriarty",
+        "ISBN":"1405916362",
+        "description": "Jane hasn't lived anywhere longer than six months since her son was born five years ago. She keeps moving in an attempt to escape her past…",
         "onloan":"No",
         "read": "Yes",
-        "ratings":"3/5",
-        "opinion":"Good book for kids"
-        "cover":"http://books.google.com/books/content?id=2ZjHBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrow":
-        "borrower":
+        "ratings":"5/5",
+        "opinion":"Would read again!",
+        "cover":"http://books.google.com/books/content?id=Pc3mrQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "borrower":"",
+        "date_of_borrow":""
        
     },
     {
-        "id":"GuAUMQAACAAJ",
+        "id":"rruOEAAAQBAJ",
         "title":"Atomic Habits",
         "author":"James Clear",
         "ISBN":"1847941834",
-        "description": "________________________________ 'A supremely practical and useful book. James Clear distils the most fundamental information about habi…",
+        "description": "Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform you…",
         "onloan":"Yes",
         "read":"Yes",
         "ratings":"4/5",
-        "opinion":"So useful"
-        "cover":"http://books.google.com/books/content?id=GuAUMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrow":
+        "opinion":"So useful",
+        "cover":"http://books.google.com/books/content?id=rruOEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         "borrower":"Grace",
+        "date_of_borrow": ""
        
     },
 
@@ -54,10 +55,10 @@
         "onloan":"No",
         "read":"No",
         "ratings":"/5",
-        "opinion":
+        "opinion":"",
         "cover":"http://books.google.com/books/content?id=hufGzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrow":
-        "borrower":
+        "borrower":"",
+        "date_of_borrow":""
        
     },
 
@@ -68,12 +69,12 @@
         "ISBN":"009193558X",
         "description":"\"An incredibly powerful mind management model that can help a person become happier, more confident, and a healthier more successfu…",
         "onloan":"No",
-        "read":"Yes"
+        "read":"Yes",
         "ratings":"3/5",
-        "opinion":"Hard to understand"
+        "opinion":"Hard to understand",
         "cover":"http://books.google.com/books/content?id=XrivyBioCjYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrow":
-        "borrower":
+        "borrower":"",
+        "date_of_borrow": ""
        
     },
 
@@ -86,10 +87,10 @@
         "onloan":"No",
         "read":"Yes",
         "ratings":"5/5",
-        "opinion":"Touching story"
+        "opinion":"Touching story",
         "cover":"http://books.google.com/books/content?id=T3upDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrow":
-        "borrower":
+        "borrower":"",
+        "date_of_borrow": ""
        
     },
 
@@ -104,8 +105,8 @@
         "ratings":"2/5",
         "opinion":"It was a bit boring",
         "cover":"http://books.google.com/books/content?id=ieeyzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrow":
         "borrower":"Sam",
+        "date_of_borrow": ""
        
     },
 
@@ -120,8 +121,8 @@
         "ratings":"5/5",
         "opinion":"Helpful",
         "cover":"http://books.google.com/books/content?id=Co61EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrow":
-        "borrower":
+        "borrower":"",
+        "date_of_borrow": ""
        
     },
 
@@ -134,10 +135,10 @@
         "onloan":"No",
         "read":"No",
         "ratings":"/5",
-        "opinion":
+        "opinion":"",
         "cover":"http://books.google.com/books/content?id=mIWHngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrow":
-        "borrower":
+        "borrower":"",
+        "date_of_borrow": ""
        
     },
 
@@ -146,14 +147,14 @@
         "title": "How to Kill Your Family",
         "author":"Bella Mackie",
         "ISBN":"0008365946",
-        "description":"THE #1 SUNDAY TIMES BESTSELLER 'I loved this book' RICHARD OSMAN 'Funny, sharp, dark and twisted' JOJO MOYES 'Chilling, but als…",
+        "description":"Meet Grace Bernard. Daughter, sister, serial killer...",
         "onloan":"Yes",
         "read":"Yes",
         "ratings":"5/5",
-        "opinion":"Good fiction book"
+        "opinion":"Good fiction book",
         "cover":"http://books.google.com/books/content?id=G7BbzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrow":
         "borrower":"Taylor",
+        "date_of_borrow": ""
        
     },
 
@@ -162,14 +163,14 @@
         "title":"The Midnight Library",
         "author":"Matt Haig",
         "ISBN":"1786892731",
-        "description":"THE SUNDAY TIMES NUMBER ONE BESTSELLING WORLDWIDE PHENOMENON READERS' MOST LOVED BOOK OF 2021 WINNER OF THE GOODREADS CHOICE AWARD FO…",
+        "description":"Then at the stroke of midnight on her last day on earth she finds herself transported to a library. There she is given the chance to und…",
         "onloan":"No",
         "read":"No",
         "ratings":"/5",
-        "opinion":
+        "opinion":"",
         "cover":"http://books.google.com/books/content?id=M53SDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrow":
-        "borrower":
+        "borrower":"",
+        "date_of_borrow": ""
        
     },
 
@@ -182,12 +183,12 @@
         "onloan":"Yes",
         "read":"Yes",
         "ratings":"4/5",
-        "opinion":"Perfect for kids"
+        "opinion":"Perfect for kids",
         "cover":"http://books.google.com/books/content?id=mHLFDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrow":
         "borrower":"Sarah",
+        "date_of_borrow": ""
        
-    },
+    }
 
     
 
