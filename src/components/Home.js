@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BookCard from './BookCard';
 import OnLoan from './OnLoanModal';
+import BookModal from './BookModal';
 import allBooks from '../data/Library.json';
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
@@ -12,10 +13,20 @@ const Home = () => {
 
   const [bookList, setBooks] = useState(allBooks);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedBook_details, setSelectedBook_details] = useState(null);
 
-  const openModal = (book) => {
+
+
+  //Function for opening on loan modal
+  const openOnLoanModal = (book) => {
     setSelectedItem(book);
   };
+
+    //Function for opening book modal
+    const openBookModal = (book) => {
+      setSelectedBook_details(book);
+    };
+
 
   return (
     <div>
@@ -45,7 +56,8 @@ const Home = () => {
                 cover = {book.cover}
                 date_borrowed={book.date_borrowed}
                 borrower={book.borrower}
-                onOpenModal={openModal}
+                onOpenModal={openOnLoanModal}
+                onOpenBookModal={openBookModal}
                 />
           ))}
         </div>
@@ -54,6 +66,9 @@ const Home = () => {
       <OnLoan
           selectedItem={selectedItem}
       /> 
+      <BookModal
+        selectedBook={selectedBook_details}
+       />
     </div>
   )
 }

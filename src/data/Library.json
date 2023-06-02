@@ -29,19 +29,18 @@
        
     },
     {
-        "id":"Pc3mrQEACAAJ",
-        "title":"Big Little Lies",
-        "author":"Liane Moriarty",
-        "ISBN":"1405916362",
-        "description": "Jane hasn't lived anywhere longer than six months since her son was born five years ago. She keeps moving in an attempt to escape her past…",
+        "id":"0TbUzgEACAAJ",
+        "title":"Verity",
+        "author":"Colleen Hoover",
+        "ISBN":"1408726602",
+        "description": "Rebecca meets Gone Girl in this shocking, unpredictable thriller with a twist that will leave you reeling . . .",
         "onloan":"No",
-        "read": "Yes",
-        "ratings":"5/5",
-        "opinion":"Would read again!",
-        "cover":"http://books.google.com/books/content?id=Pc3mrQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "read":"Yes",
+        "ratings":"4/5",
+        "opinion":"",
+        "cover":"http://books.google.com/books/content?id=0TbUzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         "borrower":"",
         "date_of_borrow":""
-       
     },
     {
         "id":"rruOEAAAQBAJ",
@@ -90,23 +89,6 @@
         "date_of_borrow": ""
        
     },
-    
-    {
-        "id":"T3upDwAAQBAJ",
-        "title":"The Boy, The Mole, The Fox and The Horse",
-        "author":"Charlie Mackesy",
-        "ISBN":"1529105102",
-        "description": "Discover the very special book that has captured the hearts of millions of readers all over the world. 'A wonderful work of art and …",
-        "onloan":"No",
-        "read":"Yes",
-        "ratings":"5/5",
-        "opinion":"Touching story",
-        "cover":"http://books.google.com/books/content?id=T3upDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrower":"",
-        "date_of_borrow": ""
-       
-    },
-
     {
         "id":"ieeyzgEACAAJ",
         "title":"Rich Dad Poor Dad",
@@ -122,39 +104,6 @@
         "date_of_borrow": ""
        
     },
-
-    {
-        "id":"Co61EAAAQBAJ",
-        "title":"JavaScript All-in-One For Dummies",
-        "author":"Chris Minnick",
-        "ISBN":"1119906830",
-        "description":"A developer's resource to learning one of the most-used scripting languages JavaScript All-in-One For Dummies saves you shelf space b…",
-        "onloan":"No",
-        "read":"Yes",
-        "ratings":"5/5",
-        "opinion":"Helpful",
-        "cover":"http://books.google.com/books/content?id=Co61EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrower":"",
-        "date_of_borrow": ""
-       
-    },
-
-    {
-        "id":"mIWHngEACAAJ",
-        "title":"Dear Zoo",
-        "author":"Rod Campbell",
-        "ISBN":"014050446X",
-        "description": "Answering a child's request, the zoo keeps sending a wide assortment of animals until they find the perfect pet.",
-        "onloan":"No",
-        "read":"No",
-        "ratings":"/5",
-        "opinion":"",
-        "cover":"http://books.google.com/books/content?id=mIWHngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrower":"",
-        "date_of_borrow": ""
-       
-    },
-
     {
         "id": "G7BbzgEACAAJ",
         "title": "How to Kill Your Family",
@@ -186,22 +135,50 @@
         "date_of_borrow": ""
        
     },
-
     {
-        "id":"mHLFDAAAQBAJ",
-        "title":"The Gruffalo",
-        "author":"Julia Donaldson",
-        "ISBN":"1509804757",
-        "description":"\"A mouse took a stroll through the deep dark wood. A fox saw the mouse and the mouse looked good.\"Walk further into the deep dark wood, an…",
-        "onloan":"Yes",
+        "id":"j0zpjgEACAAJ",
+        "title":"It Ends with Us",
+        "author":"Colleen Hoover",
+        "ISBN":"1471156265",
+        "description":"A bold, heart-wrenching story of love coming at the ultimate price from the beloved No. 1 New York Times bestselling author, Colleen Hoover.",
+        "onloan":"No",
+        "read":"No",
+        "ratings":"/5",
+        "opinion":"",
+        "cover": "http://books.google.com/books/content?id=j0zpjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "borrower":"",
+        "date_of_borrow":""
+    },
+    {
+        "id":"eNGkzgEACAAJ",
+        "title":"The Seven Husbands of Evelyn Hugo",
+        "author":"Taylor Jenkins Reid",
+        "ISBN":"1398515698",
+        "description":"From the author of Daisy Jones & The Six in which a legendary film actress reflects on her relentless rise to the top and the risks sh…",
+        "onloan":"No",
+        "read":"Yes",
+        "ratings":"5/5",
+        "opinion":"Best book I have read this year!",
+        "cover":"http://books.google.com/books/content?id=eNGkzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "borrower":"",
+        "date_of_borrow":""
+    },
+    {
+        "id":"-AxSzwEACAAJ",
+        "title":"Happy Place",
+        "author":"Emily Henry",
+        "ISBN":"0241997933",
+        "description": "Harriet and Wyn are the perfect couple - they go together like bread and butter, gin and tonic, Blake Lively and Ryan Reynolds. Every yea…",
+        "onloan":"No",
         "read":"Yes",
         "ratings":"4/5",
-        "opinion":"Perfect for kids",
-        "cover":"http://books.google.com/books/content?id=mHLFDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        "borrower":"Sarah",
-        "date_of_borrow": ""
-       
+        "opinion":"",
+        "cover":"http://books.google.com/books/content?id=-AxSzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "borrower":"",
+        "date_of_borrow":""
     }
+
+
 
     
 
