@@ -11,7 +11,7 @@ const BookCard=(props)=> {
           <div className="card-body">
             <div className="card_btn_wrapper">
               <button type="button" className="btn-default small" data-toggle="modal" data-target="#exampleModal" onClick={() => props.onOpenModal(props)}>On Loan</button>
-              <FontAwesomeIcon icon="fa-solid fa-ellipsis" style={{color: "#000333",}} />
+              <FontAwesomeIcon icon="fa-solid fa-ellipsis" style={{color: "#333333",}} />
               </div>
             </div>
       </div>

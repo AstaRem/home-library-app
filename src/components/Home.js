@@ -12,7 +12,6 @@ const Home = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const openModal = (book) => {
-    console.log(book);
     setSelectedItem(book);
   };
 
@@ -28,8 +27,12 @@ const Home = () => {
           </form>
         </div>
       </section>
+     
       <section className="section_library">
       <div className="container">
+      <div className="home_btn_wrapper">
+        <button type="button" className="btn-default">Add New Book</button>
+      </div>
         <div className="row no-gutters">
           {bookList.map((book) => (
                 <BookCard

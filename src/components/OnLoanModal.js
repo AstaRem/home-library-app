@@ -49,12 +49,14 @@ function OnLoan (props){
     </div>
     ) 
     }else{
-      return (
-        <div>
+      /*  return (
+       <div>
+
           console.log("No item selected");
-        </div>
+        </div> 
       
-      )
+      )*/
+      console.log("No item selected");
     };
   }
   
