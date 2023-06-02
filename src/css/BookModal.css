@@ -1,0 +1,53 @@
+
+.OnLoan_book_cover {
+    width: 80px;
+    height: 90px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.book_name {
+    font-weight: bold;
+}
+
+.form-group{
+    display: flex;
+}
+
+.datepicker, .name_of_borrower{
+    margin-right: 20px;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.book-container, .checkbox-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px 5px 20px;
+}
+
+.on-loan {
+    margin-right: 2rem;
+}
+
+.ratings-container{
+    width: 30%;
+}
+
+.my-notes{
+    margin-top: 3rem;
+}
+
+.btn-save {
+    width: 30%;
+    border-radius: 20px;
+}
+
+#borrower {
+    margin-bottom: 2rem;
+    
+}
+
