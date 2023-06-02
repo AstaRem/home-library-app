@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookCard from './BookCard';
+import OnLoan from './OnLoanModal';
+import allBooks from '../data/all_books_demo.json';
 import '../css/Home.css';
 
 
-function Home() {
+
+const Home = () => {
+
+  const [bookList, setBooks] = useState(allBooks);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const openModal = (book) => {
+    console.log(book);
+    setSelectedItem(book);
+  };
+
   return (
     <div>
       <section className="jumbotron">
@@ -13,9 +26,29 @@ function Home() {
             </div>
             <button className="btn-default" type="submit" id="home_form_book_search_btn">SEARCH</button>
           </form>
-        
         </div>
       </section>
+      <section className="section_library">
+      <div className="container">
+        <div className="row no-gutters">
+          {bookList.map((book) => (
+                <BookCard
+                key={book.id}
+                id={book.id}
+                title={book.title}
+                author={book.author}
+                cover = {book.cover}
+                date_borrowed={book.date_borrowed}
+                borrower={book.borrower}
+                onOpenModal={openModal}
+                />
+          ))}
+        </div>
+      </div>
+      </section>
+      <OnLoan
+          selectedItem={selectedItem}
+      /> 
     </div>
   )
 }
