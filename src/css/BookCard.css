@@ -1,0 +1,13 @@
+.card-container {
+    width: 128px;
+    height: 233px;
+    background-color: #FFF;
+    border: 1px solid var( --light-grey);
+}
+
+.card_btn_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
