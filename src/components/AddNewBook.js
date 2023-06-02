@@ -10,7 +10,26 @@ const AddNewBook = () => {
   return (
   <ContentWrapper pageTitle="Add New Book">
       <div className="add-new-book">
-      <div className="Add-new-book">
+      <Row className="align-items-center mb-3">
+          <Col xs={1}>
+            {/* Radios */}
+            <Form.Check
+              type="radio"
+              name="radioGroup"
+              id="radio1"
+              label=""
+            />
+          </Col>
+          <Col xs={4}>
+            {/* Input area */}
+            <Form.Control type="text" placeholder="Enter text" />
+          </Col>
+          <Col xs={2}>
+            {/* Search button */}
+            <Button variant="primary">Search</Button>
+          </Col>
+        </Row>
+      <div className="add-cancel-btn">
         <button className="btn btn-primary">Add</button>
         <button className="btn btn-secondary">Cancel</button>
       </div>
