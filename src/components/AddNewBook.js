@@ -1,5 +1,6 @@
 import React from 'react';
 import ContentWrapper from './ContentWrapper';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/AddNewBook.css';
 
