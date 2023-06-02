@@ -29,6 +29,21 @@ const AddNewBook = () => {
             <Button variant="primary">Search</Button>
           </Col>
         </Row>
+        <Row className="align-items-center">
+          <Col xs={1}>
+            {/* Radios */}
+            <Form.Check
+              type="radio"
+              name="radioGroup"
+              id="radio2"
+              label=""
+            />
+          </Col>
+          <Col xs={4}>
+            {/* "Add manually" text */}
+            <span>Add manually</span>
+          </Col>
+        </Row>
       <div className="add-cancel-btn">
         <button className="btn btn-primary">Add</button>
         <button className="btn btn-secondary">Cancel</button>
