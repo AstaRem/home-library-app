@@ -11,10 +11,7 @@ const AddNewBook = () => {
   <ContentWrapper pageTitle="Add New Book">
       <div className="add-new-book">
       <div className="Add-new-book">
-        {/* Add button */}
         <button className="btn btn-primary">Add</button>
-
-        {/* Cancel button */}
         <button className="btn btn-secondary">Cancel</button>
       </div>
           
