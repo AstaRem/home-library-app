@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #567D89;
+  background-color: var(--primary-color);
   width: 100%;
   padding-top: 0 !important;
   padding-bottom:0 !important;
@@ -40,9 +40,10 @@
 }
 
 .nav-link:hover {
-  background-color: #5B8A99;
+  background-color: #3C5963;
 }
 
 .nav-link.active {
-  background-color: #45717E;
+  background-color: var(--orange-yellow);
+  color: #FFF !important;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './OnLoan.css'
+import '../css/OnLoanModal.css'
 
 function OnLoan (){
     return (
@@ -8,9 +8,9 @@ function OnLoan (){
     {/* <    <!-- Button trigger modal --> 
     I am leaving the button to triger Modal here for now
     */}
-<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+{/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
-  </button>
+  </button> */}
 
   
   {/* <!-- Modal --> */}
