@@ -23,7 +23,7 @@ const AddNewBook = () => {
           </Col>
           <Col xs={4}>
             {/* Input area */}
-            <Form.Control type="text" placeholder="Enter text" />
+            <Form.Control type="text" id="search-book" placeholder="Book title, author or ISBN" />
           </Col>
           <Col xs={2}>
             {/* Search button */}
