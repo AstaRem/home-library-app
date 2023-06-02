@@ -12,8 +12,7 @@ function Home() {
               <input className="form-control" type="text" placeholder="Please enter book title, author or ISBN" aria-label="Search" id="home_search_input"/>
             </div>
             <button className="btn-default" type="submit" id="home_form_book_search_btn">SEARCH</button>
-          </form>
-        
+          </form>        
         </div>
       </section>
     </div>
