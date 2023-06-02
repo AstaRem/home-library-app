@@ -1,17 +1,22 @@
-import React from 'react'
+import React from 'react';
+import '../css/BookCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function BookCard() {
+
+const BookCard=(props)=> {
   return (
-    <div className="card book_card">
-        <img src="https://books.google.com/books/content?id=LdQtzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" className="card-img-top" alt="..." />
-        <div className="card-body">
-            <p>hfjdjdffjhdhjdf</p>
-            {/* <h5 className="card-title">Card title</h5> */}
-            {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-
-            {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-        </div>
-</div>
+    <div className="card-container col-lg-2 col-md-6 col-sm-12" key={props.id}>
+      <div className="card">
+        <img src={props.cover} className="card-img-top" alt={props.title} />
+          <div className="card-body">
+            <div className="card_btn_wrapper">
+              <button type="button" className="btn-default small" data-toggle="modal" data-target="#exampleModal" onClick={() => props.onOpenModal(props)}>On Loan</button>
+              <FontAwesomeIcon icon="fa-solid fa-ellipsis" style={{color: "#333333",}} />
+              </div>
+            </div>
+      </div>
+      
+  </div>
   )
 }
 
