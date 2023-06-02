@@ -1,5 +1,3 @@
-
-
 [
 
     {
@@ -11,10 +9,9 @@
         "onloan":"No",
         "read":"Yes",
         "ratings":"4/5",
-        "opinion":"Great story"
+        "opinion":"Great story",
         "cover":"http://books.google.com/books/content?id=EN8fzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "borrow":
-        "borrower":
+        "borrower":""
        
     },
     {
