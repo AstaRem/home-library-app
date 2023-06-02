@@ -44,10 +44,12 @@ const AddNewBook = () => {
             <span>Add manually</span>
           </Col>
         </Row>
-      <div className="add-cancel-btn">
-        <button className="btn btn-primary">Add</button>
-        <button className="btn btn-secondary">Cancel</button>
-      </div>
+        <Row>
+          <Col>
+            <Button className="mr-2" variant="primary">Add</Button>
+            <Button variant="secondary">Cancel</Button>
+          </Col>
+        </Row>
           
       </div>
   </ContentWrapper> 
