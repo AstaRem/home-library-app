@@ -21,12 +21,8 @@ function OnLoan (props){
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">On Loan</h5>
-            {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close"> */}
-            
+            <h5 className="modal-title" id="exampleModalLabel">On Loan</h5>      
             <FontAwesomeIcon icon={faRectangleXmark} size="2xl" style={{color: "#ffad4d",}} type="button" className="close" data-dismiss="modal" aria-label="Close" />             
-             {/* <span aria-hidden="true">&times;</span> */}
-            {/* </button> */}
           </div>
           <div className="modal-body">
 
