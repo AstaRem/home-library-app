@@ -5,7 +5,8 @@
         "title":"The Man Who Died Twice",
         "author":"Richard Osman",
         "ISBN":"0241988241",
-        "description":"It’s the following Thursday. Elizabeth has received a letter from an old colleague, a man with whom she has a long history. He’s made a bi…",
+        "description":"It's the following Thursday. Elizabeth has received a letter from an old colleague, a man with whom she has a long history. He's made a bi…",
+        "onloan":"No",
         "read":"No",
         "ratings":"/5",
         "opinion":"",
@@ -79,7 +80,7 @@
         "title":"The Chimp Paradox",
         "author":"Steve Peters",
         "ISBN":"009193558X",
-        "description":"\"An incredibly powerful mind management model that can help a person become happier, more confident, and a healthier more successfu…",
+        "description":"An incredibly powerful mind management model that can help a person become happier, more confident, and a healthier more successfu…",
         "onloan":"No",
         "read":"Yes",
         "ratings":"3/5",
@@ -177,10 +178,5 @@
         "borrower":"",
         "date_of_borrow":""
     }
-
-
-
-    
-
 
 ]
