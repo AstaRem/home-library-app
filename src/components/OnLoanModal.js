@@ -43,8 +43,8 @@ function OnLoan (props){
                 </form>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" className="btn btn-primary">Save</button>
+            <button type="button" className="btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" className="btn-default btn-save-add">Save</button>
           </div>
         </div>
       </div>
