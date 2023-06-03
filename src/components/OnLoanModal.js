@@ -25,11 +25,20 @@ function OnLoan (props){
             </button>
           </div>
           <div className="modal-body">
-              <div className="OnLoan_book_cover">
-                <img src={props.selectedItem.cover} alt={props.selectedItem.title} />
+
+            <div className="container" id="book_info">
+              <div className="row justify-content-around">
+                <div className="OnLoan_book_cover col-6 d-inline-block">
+                  <img src={props.selectedItem.cover} alt={props.selectedItem.title} className="img-fluid" />
+                </div>
+
+                <div className="book_details col-6">
+                  <h5><span className="book_name">Book title:&nbsp;</span>{props.selectedItem.title}</h5>
+                  <h5><span className="book_name">Author:&nbsp;</span>{props.selectedItem.author}</h5>
+                </div>
               </div>
-                <h5><span className="book_name">Book title:</span>{props.selectedItem.title}</h5>
-                <h5><span className="book_name">Author:</span>{props.selectedItem.author}</h5>
+            </div>
+
                 <form>
                     <div className="form-group">
                       <label htmlFor="datepicker" className="datepicker">Date of borrow:</label>
