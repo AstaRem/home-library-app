@@ -10,7 +10,7 @@ const BookCard=(props)=> {
         <img src={props.cover} className="card-img-top" alt={props.title} />
           <div className="card-body">
             <div className="card_btn_wrapper">
-              <button type="button" className="btn-default small" data-toggle="modal" data-target="#exampleModal" onClick={() => props.openOnLoanModal(props)}>On Loan</button>
+              <button type="button" className="btn-default small" data-toggle="modal" data-target="#exampleModal" onClick={() => props.onOpenModal(props)}>On Loan</button>
               <FontAwesomeIcon icon="fa-solid fa-ellipsis" style={{color: "#333333",}}  data-toggle="modal" data-target="#bookModal" onClick={() => props.onOpenBookModal(props)}/>
               </div>
             </div>
