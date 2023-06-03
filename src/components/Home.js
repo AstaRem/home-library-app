@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import BookCard from './BookCard';
 import OnLoan from './OnLoanModal';
 import BookModal from './BookModal';
-import allBooks from '../data/Library.json';
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
 
 
-const Home = () => {
+const Home = (props) => {
 
   const navigate = useNavigate();
 
-  const [bookList, setBooks] = useState(allBooks);
+  const [bookList, setBooks] = useState(props.data);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedBook_details, setSelectedBook_details] = useState(null);
 
