@@ -28,11 +28,11 @@ function OnLoan (props){
 
             <div className="container" id="book_info">
               <div className="row justify-content-around">
-                <div className="OnLoan_book_cover col-6 d-inline-block">
+                <div className="OnLoan_book_cover col-5 d-inline-block">
                   <img src={props.selectedItem.cover} alt={props.selectedItem.title} className="img-fluid" />
                 </div>
 
-                <div className="book_details col-6">
+                <div className="book_details col-7">
                   <h5><span className="book_name">Book title:&nbsp;</span>{props.selectedItem.title}</h5>
                   <h5><span className="book_name">Author:&nbsp;</span>{props.selectedItem.author}</h5>
                 </div>
@@ -42,7 +42,6 @@ function OnLoan (props){
                 <form>
                     <div className="form-group">
                       <label htmlFor="datepicker" className="datepicker">Date of borrow:</label>
-                      {/* <input type="email" className="form-control" id="datepicker" placeholder="Datepicker" /> */}
                       <ChooseDate />
                     </div>
                     <div className="form-group">
