@@ -34,11 +34,12 @@ div.OnLoan_book_cover img {
   }
     
 #book_info {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     height: 110px;
 }
 
 .book_details, .OnLoan_book_cover{
     margin: 0;
+    
 }
 
