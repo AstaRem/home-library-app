@@ -2,6 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/OnLoanModal.css';
 import ChooseDate from './ChooseDate';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRectangleXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 function OnLoan (props){
@@ -19,10 +21,8 @@ function OnLoan (props){
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">On Loan</h5>
-            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h5 className="modal-title" id="exampleModalLabel">On Loan</h5>      
+            <FontAwesomeIcon icon={faRectangleXmark} size="2xl" style={{color: "#ffad4d",}} type="button" className="close" data-dismiss="modal" aria-label="Close" />             
           </div>
           <div className="modal-body">
 
