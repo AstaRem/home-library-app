@@ -86,6 +86,7 @@ const Home = (props) => {
       /> 
       <BookModal
         selectedBook={selectedBook_details}
+        updateBookList = {updateBookList}
        />
     </div>
   )
