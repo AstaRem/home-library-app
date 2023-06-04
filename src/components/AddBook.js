@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import ContentWrapper from './ContentWrapper';
 import '../css/AddBook.css';
 
@@ -97,9 +98,7 @@ const AddBook = () => {
         toast.success('Book added!');
       }
     }
-  };
-  
-
+  };  
   const handleCancel = () => {
     setSearchInput('');
     setBooks([]);
@@ -139,7 +138,7 @@ const AddBook = () => {
             />
           </div>
           <div className="col-auto">
-            <button className="btn btn-primary" onClick={handleSearch}>
+            <button className="btn-default" onClick={handleSearch}>
               Search
             </button>
           </div>
@@ -186,9 +185,7 @@ const AddBook = () => {
     setSelectedBookId('');
     setShowResults(false);
   }}
-/>
-
-            
+/>   
             <h6>Add Manually</h6>
           </div>
           <div className="col"></div>
@@ -244,15 +241,14 @@ const AddBook = () => {
         <div className="row mt-3">
           <div className="col">
             <button
-              className="btn btn-success btn-block"
+              className="btn-default "
               onClick={handleAddToLocalStorage}
-              disabled={!selectedBookId && !manualAdd}
-            >
+              disabled={!selectedBookId && !manualAdd}>
               Add
             </button>
           </div>
           <div className="col">
-            <button className="btn btn-secondary btn-block" onClick={handleCancel}>
+            <button className="btn-default" onClick={handleCancel}>
               Cancel
             </button>
           </div>
