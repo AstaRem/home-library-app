@@ -66,6 +66,8 @@ const Home = (props) => {
                 title={book.title}
                 author={book.author}
                 cover = {book.cover}
+                onloan = {book.onloan}
+                ratings = {book.ratings}
                 date_of_borrow={book.date_of_borrow}
                 borrower={book.borrower}
                 onOpenModal={openOnLoanModal}
