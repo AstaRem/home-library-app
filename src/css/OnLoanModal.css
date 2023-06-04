@@ -13,8 +13,11 @@
 
 .OnLoan_book_cover {
     height: 200px;
-    border-radius: 5px;
     padding: 0;
+}
+
+.OnLoan_book_cover img{
+    border-radius: 5px;   
 }
 
 .book_name {
