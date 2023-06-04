@@ -112,8 +112,8 @@ const AddBook = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h1>Add New Book</h1>
+    <ContentWrapper pageTitle="Add New Book"> 
+
       <div className="content-wrapper">
         <div className="row">
           <div className="col">
@@ -259,7 +259,7 @@ const AddBook = () => {
         </div>
       </div>
       <ToastContainer />
-    </div>
+      </ContentWrapper>
   );
 };
 
