@@ -69,7 +69,7 @@ function OnLoan (props){
 
   if((props.selectedItem)!== null){
     return (
-      <div> 
+      <div id="on_loan_modal"> 
         <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -79,13 +79,13 @@ function OnLoan (props){
             </div>
             <div className="modal-body">
               <div className="container" id="book_info">
-                <div className="row justify-content-start no-gutters">
-                  <div className="OnLoan_book_cover col-6 d-inline-block">
-                    <img src={props.selectedItem.cover} alt={props.selectedItem.title} className="img-fluid" />
+                <div className="row book_container justify-content-between">
+                  <div className="OnLoan_book_cover col-sm-3">
+                    <img src={props.selectedItem.cover} alt={props.selectedItem.title} className="image-fluid" />
                   </div>
-                  <div className="book_details col-6">
-                    <h5><span className="book_name">Book title:&nbsp;</span>{props.selectedItem.title}</h5>
-                    <h5><span className="book_name">Author:&nbsp;</span>{props.selectedItem.author}</h5>
+                  <div className="book_details col-sm-9">
+                    <h5><span className="book_name">Book title:<br/></span>{props.selectedItem.title}</h5>
+                    <h5><span className="book_name">Author:<br/></span>{props.selectedItem.author}</h5>
                   </div>
                 </div>
               </div>

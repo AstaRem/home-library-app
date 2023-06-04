@@ -1,16 +1,48 @@
+#on_loan_modal {
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--charcoal) !important;
+    font-weight: 400 !important;
+
+  }
+
+.book_container{
+    height: 200px;
+}
 
 .OnLoan_book_cover {
-    width: 80px;
-    height: 90px;
-    background-color: lightgrey;
-    border-radius: 5px;
+    height: 200px;
     padding: 0;
+}
+
+.OnLoan_book_cover img{
+    border-radius: 5px;   
 }
 
 .book_name {
     font-weight: bold;
 }
 
+
+div.OnLoan_book_cover {
+    display: inline-block !important; 
+  }
+  
+    
+#book_info {
+    margin-bottom: 2rem;
+    height: 200px;
+}
+
+.book_details{
+    display: border-box;
+    padding-left: 2rem;
+    
+}
+
+
+/* form */
 .form-group{
     display: flex;
 }
@@ -23,11 +55,6 @@
 .name_of_borrower, .datepicker{
     margin-right: 0 !important;
 }
-
-/* .borrow_label, .name_of_borrower{
-    padding:0;
-    margin: 0;
-} */
 
 .borrower_container {
     padding-right: 0 !important;
@@ -46,21 +73,3 @@ form{
     justify-content: center;
 }
 
-div.OnLoan_book_cover {
-    display: inline-block !important; 
-  }
-  
-div.OnLoan_book_cover img {
-    width: 100%; 
-    height: 110px !important; 
-  }
-    
-#book_info {
-    margin-bottom: 2rem;
-    height: 110px;
-}
-
-.book_details, .OnLoan_book_cover{
-    margin: 0;
-    
-}
