@@ -4,11 +4,15 @@
     -moz-osx-font-smoothing: grayscale;
     color: var(--charcoal) !important;
     font-weight: 400 !important;
+
   }
+
+.book_container{
+    height: 200px;
+}
+
 .OnLoan_book_cover {
-    width: 80px;
-    height: 90px;
-    background-color: lightgrey;
+    height: 200px;
     border-radius: 5px;
     padding: 0;
 }
@@ -17,22 +21,20 @@
     font-weight: bold;
 }
 
+
 div.OnLoan_book_cover {
     display: inline-block !important; 
   }
   
-div.OnLoan_book_cover img {
-    width: 100%; 
-    height: 110px !important; 
-  }
     
 #book_info {
     margin-bottom: 2rem;
-    height: 110px;
+    height: 200px;
 }
 
-.book_details, .OnLoan_book_cover{
-    margin: 0;
+.book_details{
+    display: border-box;
+    padding-left: 2rem;
     
 }
 
