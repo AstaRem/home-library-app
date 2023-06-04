@@ -23,6 +23,7 @@
   
     setData = (newData) => {
       this.data = newData;
+      console.log("updated data: " + JSON.stringify(this.data));
     };
   }
   

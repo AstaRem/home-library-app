@@ -53,7 +53,7 @@ const Home = (props) => {
                 title={book.title}
                 author={book.author}
                 cover = {book.cover}
-                date_borrowed={book.date_borrowed}
+                date_of_borrow={book.date_of_borrow}
                 borrower={book.borrower}
                 onOpenModal={openOnLoanModal}
                 onOpenBookModal={openBookModal}
