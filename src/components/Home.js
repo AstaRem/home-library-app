@@ -5,7 +5,6 @@ import BookModal from './BookModal';
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
 
-
 const Home = (props) => {
 
   const navigate = useNavigate();
@@ -66,6 +65,8 @@ const Home = (props) => {
                 title={book.title}
                 author={book.author}
                 cover = {book.cover}
+                onloan = {book.onloan}
+                ratings = {book.ratings}
                 date_of_borrow={book.date_of_borrow}
                 borrower={book.borrower}
                 onOpenModal={openOnLoanModal}
