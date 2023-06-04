@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import BooksOnLoan from './components/BooksOnLoan';
 import DataHandleService from './service/DataHandleService';
-//import AddNewBook from './components/AddNewBook';
+import AddBook from './components/AddBook';
 import 'bootstrap/dist/css/bootstrap.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEllipsis, faStar, faBookOpenReader} from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +42,7 @@ function App() {
         element={bookData.length > 0 ? <Home data={bookData} /> : <Spinner/>}
           />
           <Route path="BooksOnLoan" element={<BooksOnLoan />} />
-          {/* <Route path="AddNewBook" element={<AddNewBook />} /> */}
+          <Route path="AddBook" element={AddBook} />
         </Routes>
       </div>
     </Router>
