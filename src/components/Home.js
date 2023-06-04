@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BookCard from './BookCard';
 import OnLoan from './OnLoanModal';
-import AddBook from './AddBook';
 import BookModal from './BookModal';
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
@@ -88,7 +87,6 @@ const Home = (props) => {
       <BookModal
         selectedBook={selectedBook_details}
        />
-       <AddBook />
     </div>
   )
 }
