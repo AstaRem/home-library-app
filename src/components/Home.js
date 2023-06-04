@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BookCard from './BookCard';
 import OnLoan from './OnLoanModal';
 import BookModal from './BookModal';
@@ -10,12 +10,16 @@ const Home = (props) => {
 
   const navigate = useNavigate();
 
-  const [bookList, setBooks] = useState(props.data);
+  const [bookList, setBookList] = useState(props.data);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedBook_details, setSelectedBook_details] = useState(null);
 
+  // keep track of bookList
+  useEffect(() => {
+    console.log("bookList:", bookList);
+   }, [bookList]);
 
-
+  
   //Function for opening on loan modal
   const openOnLoanModal = (book) => {
     setSelectedItem(book);
@@ -25,6 +29,15 @@ const Home = (props) => {
     const openBookModal = (book) => {
       setSelectedBook_details(book);
     };
+
+    const updateBookList = (updatedBook) => {
+      const bookIndex = bookList.findIndex((book) => book.id === updatedBook.id);
+      if (bookIndex !== -1) {
+        const updatedList = [...bookList];
+        updatedList[bookIndex] = updatedBook;
+        setBookList(updatedList);
+      }
+    }
 
 
   return (
@@ -64,6 +77,7 @@ const Home = (props) => {
       </section>
       <OnLoan
           selectedItem={selectedItem}
+          updateBookList = {updateBookList}
       /> 
       <BookModal
         selectedBook={selectedBook_details}
