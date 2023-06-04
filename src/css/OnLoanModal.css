@@ -17,9 +17,10 @@
 
 .borrower_input_field, .date_input_field{
     padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-.name_of_borrower{
+.name_of_borrower, .datepicker{
     margin-right: 0 !important;
 }
 
@@ -27,6 +28,18 @@
     padding:0;
     margin: 0;
 } */
+
+.borrower_container {
+    padding-right: 0 !important;
+    margin-bottom: 2rem; 
+}
+
+form{
+    padding-right: 0 !important;
+    margin-right: 1rem !important;
+}
+
+
 
 .modal-footer{
     display: flex;
@@ -51,4 +64,3 @@ div.OnLoan_book_cover img {
     margin: 0;
     
 }
-

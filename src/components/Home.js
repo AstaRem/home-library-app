@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BookCard from './BookCard';
 import OnLoan from './OnLoanModal';
+import AddBook from './AddBook';
 import BookModal from './BookModal';
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
@@ -54,8 +55,8 @@ const Home = (props) => {
       <section className="section_library">
       <div className="container">
       <div className="home_btn_wrapper">
-      <button type="button" className="btn-default" onClick={() => {navigate("/AddNewBook");
-        }}>Add New Book</button>
+      <button type="button" className="btn-default" onClick={() => navigate("/AddBook")}>Add New Book</button>
+
       </div>
         <div className="row no-gutters">
           {bookList.map((book) => (
@@ -87,6 +88,7 @@ const Home = (props) => {
       <BookModal
         selectedBook={selectedBook_details}
        />
+       <AddBook />
     </div>
   )
 }
