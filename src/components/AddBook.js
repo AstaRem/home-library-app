@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ContentWrapper from './ContentWrapper';
 import '../css/AddBook.css';
 
 const API_KEY = 'AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ';
@@ -113,7 +114,6 @@ const AddBook = () => {
 
   return (
     <ContentWrapper pageTitle="Add New Book"> 
-
       <div className="content-wrapper">
         <div className="row">
           <div className="col">
