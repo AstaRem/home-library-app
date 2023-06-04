@@ -88,7 +88,7 @@ const Home = (props) => {
       <BookModal
         selectedBook={selectedBook_details}
        />
-       <AddBook />
+      
     </div>
   )
 }
