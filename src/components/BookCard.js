@@ -1,5 +1,6 @@
 import React from 'react';
 import Rating from './Rating';
+import Read from './Read';
 import '../css/BookCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -9,6 +10,9 @@ const BookCard=(props)=> {
       <div className="card">
         <div className="cover_holder">
           <img src={props.cover} className="card-img-top" alt={props.title} />
+          <div className="read_wrapper">
+            <Read read={props.read} />
+          </div>
           <div className="rating_wrapper">
             <Rating ratings={props.ratings} />
           </div>
