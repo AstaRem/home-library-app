@@ -69,7 +69,7 @@ function OnLoan (props){
 
   if((props.selectedItem)!== null){
     return (
-      <div> 
+      <div id="on_loan_modal"> 
         <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
