@@ -1,0 +1,17 @@
+.circle_overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.icn_read {
+    color: var(--charcoal);
+}
+
+.icn_read.read {
+    color: #FFF;
+}

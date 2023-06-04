@@ -7,11 +7,11 @@ import DataHandleService from './service/DataHandleService';
 //import AddNewBook from './components/AddNewBook';
 import 'bootstrap/dist/css/bootstrap.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEllipsis, faStar} from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis, faStar, faBookOpenReader} from '@fortawesome/free-solid-svg-icons';
 import Spinner from './components/Spinner';
 
 
-library.add(faEllipsis, faStar);
+library.add(faEllipsis, faStar, faBookOpenReader);
 
 function App() {
 

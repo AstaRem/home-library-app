@@ -53,5 +53,13 @@
     bottom:0;
 }
 
+.read_wrapper {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 4px;
+    right: 4px;
+}
+
 
 
