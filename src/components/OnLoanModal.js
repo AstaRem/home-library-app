@@ -105,9 +105,13 @@ function OnLoan (props){
                           id="datepicker"
                         />
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="name_of_borrower" className="name_of_borrower">Borrower:</label>
+                      <div className="form-group row">
+                      <div className="col-sm-3 name_of_borrower">
+                        <label htmlFor="name_of_borrower" className="col-form-label">Borrower:</label>
+                      </div>
+                      <div className="col-sm-9 borrower_input_field">                        
                         <input className="form-control" id="name_of_borrower" placeholder="Please enter the name of borrower" value={formData.borrower || ""} onChange={inputChange} />
+                      </div>
                       </div>
                       <div className="modal-footer">
                         <button type="button" className="btn-default" data-dismiss="modal" onClick={() => onCloseModal()}>Cancel</button>
