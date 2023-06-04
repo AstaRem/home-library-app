@@ -88,17 +88,6 @@ function OnLoan (props){
                   </div>
                 </div>
               </div>
-                  {/*<form ref={formRef}>
-                      <div className="form-group">
-                      <div className="col-sm-3 name_of_borrower">
-                          <label htmlFor="name_of_borrower col-form label">Borrower:</label>
-                      </div>
-                      <div className="col-sm-9 borrower_input_field">
-                        <input className="form-control" id="name_of_borrower" placeholder="Please enter the name of borrower" value={props.selectedItem.borrower} onChange={inputChange} />
-                      </div>
-                      </div>
-                  </form> */}
-
                   <form ref={formRef} onSubmit={handleSubmit}>
                     <div className="form-group row">
                       <div className="col-sm-3 borrow_label">
@@ -125,7 +114,6 @@ function OnLoan (props){
                       </div>
                       </div>
                   </form>
-                  
             </div>
            
           </div>

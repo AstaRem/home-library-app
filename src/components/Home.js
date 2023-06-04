@@ -19,7 +19,7 @@ const Home = (props) => {
     console.log("bookList:", bookList);
    }, [bookList]);
 
-   
+  
   //Function for opening on loan modal
   const openOnLoanModal = (book) => {
     setSelectedItem(book);
