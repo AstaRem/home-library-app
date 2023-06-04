@@ -5,7 +5,6 @@ import BookModal from './BookModal';
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
 
-
 const Home = (props) => {
 
   const navigate = useNavigate();

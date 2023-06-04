@@ -3,7 +3,6 @@ import Rating from './Rating';
 import '../css/BookCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
 const BookCard=(props)=> {
   return (
     <div className="card-container col-lg-2 col-md-6 col-sm-12" key={props.id}>

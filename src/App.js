@@ -13,7 +13,6 @@ import Spinner from './components/Spinner';
 
 library.add(faEllipsis, faStar);
 
-
 function App() {
 
   const [bookData, setBookData] = useState([]);
