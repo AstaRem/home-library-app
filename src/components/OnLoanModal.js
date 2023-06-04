@@ -88,15 +88,31 @@ function OnLoan (props){
                   </div>
                 </div>
               </div>
-                  <form ref={formRef} onSubmit={handleSubmit}>
+                  {/*<form ref={formRef}>
                       <div className="form-group">
-                        <label htmlFor="datepicker" className="datepicker">Date of borrow:</label>
+                      <div className="col-sm-3 name_of_borrower">
+                          <label htmlFor="name_of_borrower col-form label">Borrower:</label>
+                      </div>
+                      <div className="col-sm-9 borrower_input_field">
+                        <input className="form-control" id="name_of_borrower" placeholder="Please enter the name of borrower" value={props.selectedItem.borrower} onChange={inputChange} />
+                      </div>
+                      </div>
+                  </form> */}
+
+                  <form ref={formRef} onSubmit={handleSubmit}>
+                    <div className="form-group row">
+                      <div className="col-sm-3 borrow_label">
+                        <label htmlFor="datepicker" className="datepicker col-form-label">Date of borrow:</label>
+                      </div>
+                      <div className="col-sm-9 date_input_field">
                         <DatePicker
                           selected={startDate}
                           onChange={(date) => {setStartDate(date)}
                           }
                           dateFormat="dd/MM/yyyy"
                           placeholderText="Click to select a date"
+                          className="form-control"
+                          id="datepicker"
                         />
                       </div>
                       <div className="form-group">
@@ -106,8 +122,10 @@ function OnLoan (props){
                       <div className="modal-footer">
                         <button type="button" className="btn-default" data-dismiss="modal" onClick={() => onCloseModal()}>Cancel</button>
                         <button type="submit" className="btn-default btn-save-add">Save</button>
-            </div>
+                      </div>
+                      </div>
                   </form>
+                  
             </div>
            
           </div>

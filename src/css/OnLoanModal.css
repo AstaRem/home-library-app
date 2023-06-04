@@ -15,9 +15,18 @@
     display: flex;
 }
 
-.datepicker, .name_of_borrower{
-    margin-right: 20px;
+.borrower_input_field, .date_input_field{
+    padding-left: 0 !important;
 }
+
+.name_of_borrower{
+    margin-right: 0 !important;
+}
+
+/* .borrow_label, .name_of_borrower{
+    padding:0;
+    margin: 0;
+} */
 
 .modal-footer{
     display: flex;
