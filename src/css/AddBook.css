@@ -1,0 +1,24 @@
+.App {
+    text-align: center;
+  }
+  
+  .search-results-container {
+  
+    border: 1px solid #ccc;
+    overflow-y: auto;
+  }
+  
+  .content-wrapper {
+    border: 1px solid #ccc;
+    padding: 50px;
+    
+   
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .form-check-label {
+    font-weight: bold;
+  }
