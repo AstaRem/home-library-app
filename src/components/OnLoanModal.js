@@ -46,7 +46,8 @@ function OnLoan (props){
     const formattedDate = startDate ? format(startDate, 'dd/MM/yyyy') : ""; 
     const updatedFormData = {
       ...formData,
-      date_of_borrow: formattedDate
+      "date_of_borrow": formattedDate,
+      "onloan": true
     };
     setFormData(updatedFormData);
     props.updateBookList(updatedFormData);
