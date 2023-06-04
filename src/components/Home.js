@@ -86,11 +86,8 @@ const Home = (props) => {
       /> 
       <BookModal
         selectedBook={selectedBook_details}
+        updateBookList = {updateBookList}
        />
-<<<<<<<<< Temporary merge branch 1
-      
-=========
->>>>>>>>> Temporary merge branch 2
     </div>
   )
 }
