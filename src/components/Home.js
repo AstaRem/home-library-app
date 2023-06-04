@@ -55,7 +55,7 @@ const Home = (props) => {
       <section className="section_library">
       <div className="container">
       <div className="home_btn_wrapper">
-      <button type="button" className="btn-default" onClick={() => navigate("/AddBook")}>Navigate to AddBook</button>
+      <button type="button" className="btn-default" onClick={() => navigate("/AddBook")}>Add New Book</button>
 
       </div>
         <div className="row no-gutters">
