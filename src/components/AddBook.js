@@ -113,7 +113,7 @@ const AddBook = () => {
 
   return (
     <ContentWrapper pageTitle="Add New Book"> 
-      <div className="content-wrapper">
+      <div className="add-book">
         <div className="row">
           <div className="col">
             
