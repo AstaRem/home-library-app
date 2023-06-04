@@ -42,7 +42,9 @@ function App() {
         element={bookData.length > 0 ? <Home data={bookData} /> : <Spinner/>}
           />
           <Route path="BooksOnLoan" element={<BooksOnLoan />} />
-          <Route path="AddBook" element={AddBook} />
+      
+          <Route path="AddBook" element={<AddBook />} />
+
         </Routes>
       </div>
     </Router>
