@@ -6,6 +6,7 @@ import ContentWrapper from './ContentWrapper';
 import '../css/AddBook.css';
 
 const API_KEY = 'AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ';
+// const API_KEY = 'AIzaSyCQLHEacmhWROPybqvUY6B1lGYo0i2VoAA'; //Asta
 
 const AddBook = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -28,15 +29,19 @@ const AddBook = () => {
       toast.error('Please enter a search query');
       return;
     }
-
+ 
+    let fullUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${searchInput}&key=${API_KEY}`
     try {
       const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchInput}&key=${API_KEY}`
+        fullUrl
+        // `https://www.googleapis.com/books/v1/volumes?q=isbn:${searchInput}&key=${API_KEY}`  //Asta - added isbn: api requires it
       );
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
+      console.log(fullUrl)
+      console.log(data);
       const booksData = data.items.map((item) => ({
         id: item.id,
         title: item.volumeInfo.title,
@@ -45,11 +50,11 @@ const AddBook = () => {
           ? item.volumeInfo.industryIdentifiers[0].identifier
           : 'N/A',
         description: item.volumeInfo.description || 'N/A',
-        coverUrl: item.volumeInfo.imageLinks
+        // response.items[0].volumeInfo.imageLinks.thumbnail
+        coverUrl: item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail
           ? item.volumeInfo.imageLinks.thumbnail
           : 'N/A',
       }));
-      
       setBooks(booksData);
       setShowResults(true);
     } catch (error) {
@@ -153,10 +158,11 @@ const AddBook = () => {
           </div>
         </div>
         {showResults && (
-          <div className="search-results-container mt-3">
+          <div className="search-results-container mt-3" >
             {books.map((book) => (
-              <div className="card mb-3" key={book.id}>
-                <div className="card-body">
+              <div className="card mb-3" key={book.id} >
+                
+                <div className="card-body ">
                   <div className="form-check">
                     <input
                       type="radio"
@@ -170,6 +176,14 @@ const AddBook = () => {
                     <label className="form-check-label" htmlFor={`radio-${book.id}`}>
                       {book.title}
                     </label>
+                  </div>
+
+                  <div>
+                    <img
+                      src={book.coverUrl}
+                      alt={book.title}
+                      className="book-thumbnail"
+                    />
                   </div>
                   <p className="card-text">Author(s): {book.authors.join(", ")}</p>
                   <p className="card-text">ISBN: {book.isbn}</p>
