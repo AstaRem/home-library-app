@@ -43,7 +43,12 @@ const AddBook = () => {
         isbn: item.volumeInfo.industryIdentifiers
           ? item.volumeInfo.industryIdentifiers[0].identifier
           : 'N/A',
+        description: item.volumeInfo.description || 'N/A',
+        coverUrl: item.volumeInfo.imageLinks
+          ? item.volumeInfo.imageLinks.thumbnail
+          : 'N/A',
       }));
+      
       setBooks(booksData);
       setShowResults(true);
     } catch (error) {
