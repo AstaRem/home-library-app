@@ -23,6 +23,9 @@ function BookModal(props){
    const handleSubmit = (event) => {
     event.preventDefault();
     props.updateBookList(formDataBookModel);
+    setTimeout(() => {
+      onCloseModal();
+    }, 100);
    }
 
    const onLoanChange = (event) => {
