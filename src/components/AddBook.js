@@ -17,6 +17,7 @@ const AddBook = () => {
   const [manualAuthor, setManualAuthor] = useState('');
   const [manualISBN, setManualISBN] = useState('');
   const [manualDescription, setManualDescription] = useState('');
+  const [manualCoverFile, setManualCoverFile] = useState(null);
 
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
@@ -43,7 +44,12 @@ const AddBook = () => {
         isbn: item.volumeInfo.industryIdentifiers
           ? item.volumeInfo.industryIdentifiers[0].identifier
           : 'N/A',
+        description: item.volumeInfo.description || 'N/A',
+        coverUrl: item.volumeInfo.imageLinks
+          ? item.volumeInfo.imageLinks.thumbnail
+          : 'N/A',
       }));
+      
       setBooks(booksData);
       setShowResults(true);
     } catch (error) {
@@ -57,7 +63,7 @@ const AddBook = () => {
   
   const handleAddToLocalStorage = () => {
     if (manualAdd) {
-      const inputCount = [manualTitle, manualAuthor, manualISBN, manualDescription].filter(Boolean).length;
+      const inputCount = [manualTitle, manualAuthor, manualISBN, manualDescription,manualCoverFile].filter(Boolean).length;
       if (inputCount === 0) {
         toast.error('Please provide at least one information');
         return;
@@ -71,6 +77,7 @@ const AddBook = () => {
         author: manualAuthor || 'N/A',
         isbn: manualISBN || 'N/A',
         description: manualDescription || 'N/A',
+        manualCoverFile: manualCoverFile ? URL.createObjectURL(manualCoverFile) : 'N/A',
       };
   
       const savedBooks = JSON.parse(localStorage.getItem('books') || '[]');
@@ -84,6 +91,7 @@ const AddBook = () => {
       setManualAuthor('');
       setManualISBN('');
       setManualDescription('');
+      setManualCoverFile('');
       toast.success('Book added!');
     } else {
       const selectedBook = books.find((book) => book.id === selectedBookId);
@@ -109,6 +117,7 @@ const AddBook = () => {
     setManualAuthor('');
     setManualISBN('');
     setManualDescription('');
+    setManualCoverFile('');
   };
 
   return (
@@ -234,7 +243,8 @@ const AddBook = () => {
             </div>
             <div className="form-group">
               <label htmlFor="manual-upload">Upload book cover:</label>
-              <input type="file" className="form-control-file" id="manual-upload" />
+              <input type="file" className="form-control-file" id="manual-upload"
+              onChange={(e) => setManualCoverFile(e.target.files[0])} />
             </div>
           </div>
         )}
