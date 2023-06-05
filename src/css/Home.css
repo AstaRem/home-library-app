@@ -9,6 +9,10 @@ width: 200px !important;
 .hero-banner {
     padding: 60px 20px;
     background:url("../assets/images/hero-banner-background.png") center center no-repeat;
+    height:218px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row_input {
@@ -20,8 +24,7 @@ width: 200px !important;
     position: relative;
     display: inline-block;
     padding:0;
-    min-width: 320px;
-    max-width: 450px;
+    min-width: 400px;
 }
 
 .search_input_wrapper .reset {
@@ -41,8 +44,8 @@ width: 200px !important;
     border-radius: 25px;
     padding-left: 15px;
     padding-right: 42px;
-    transition: width 0.3s ease;
 }
+
 
 input::placeholder {
     color: var( --middle-grey) !important;
