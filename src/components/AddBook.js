@@ -161,7 +161,7 @@ const AddBook = ({ updateBookData }) => {
         {showResults && (
           <div className="search-results-container mt-3">
             {books.map((book) => (
-              <div className="card mb-3" key={book.id}>
+              <div className="result-card mb-3" key={book.id}>
                 <div className="card-body">
                   <div className="form-check">
                     <input
@@ -257,14 +257,14 @@ const AddBook = ({ updateBookData }) => {
         <div className="row mt-3">
           <div className="col">
             <button
-              className="btn-default "
+              className="btn-default btn-save-add "
               onClick={handleAddBook}
               disabled={!selectedBookId && !manualAdd}>
               Add
             </button>
           </div>
           <div className="col">
-            <button className="btn-default" onClick={handleCancel}>
+            <button className="btn-default btn-save-add" onClick={handleCancel}>
               Cancel
             </button>
           </div>

@@ -5,3 +5,14 @@
   border-radius: 20px;
   padding: 20px;
 }
+.result-card {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border: var(--light-grey) solid 1px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
