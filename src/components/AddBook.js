@@ -79,6 +79,11 @@ const AddBook = ({ updateBookData }) => {
         description: manualDescription || 'N/A',
         manualCoverFile: manualCoverFile ? URL.createObjectURL(manualCoverFile) : 'N/A',
       };
+      const bookExists = books.some((book) => book.id === manualBook.id);
+      if (bookExists) {
+        toast.error('Book already exists');
+        return;
+      }
       updateBookData(manualBook);
       setSearchInput('');
       setBooks([]);
@@ -93,6 +98,11 @@ const AddBook = ({ updateBookData }) => {
     } else {
       const selectedBook = books.find((book) => book.id === selectedBookId);
       if (selectedBook) {
+        const bookExists = books.some((book) => book.id === selectedBook.id);
+        if (bookExists) {
+          toast.error('Book already exists');
+          return;
+        }
         updateBookData(selectedBook);
         setSearchInput('');
         setBooks([]);
