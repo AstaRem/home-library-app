@@ -8,7 +8,7 @@ import '../css/AddBook.css';
 const API_KEY = 'AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ';
 // const API_KEY = 'AIzaSyCQLHEacmhWROPybqvUY6B1lGYo0i2VoAA'; //Asta
 
-const AddBook = () => {
+const AddBook = ({ updateBookData }) => {
   const [searchInput, setSearchInput] = useState('');
   const [books, setBooks] = useState([]);
   const [selectedBookId, setSelectedBookId] = useState('');
@@ -66,7 +66,7 @@ const AddBook = () => {
     setSelectedBookId(event.target.value);
   };
   
-  const handleAddToLocalStorage = () => {
+  const handleAddBook = () => {
     if (manualAdd) {
       const inputCount = [manualTitle, manualAuthor, manualISBN, manualDescription,manualCoverFile].filter(Boolean).length;
       if (inputCount === 0) {
@@ -84,10 +84,12 @@ const AddBook = () => {
         description: manualDescription || 'N/A',
         manualCoverFile: manualCoverFile ? URL.createObjectURL(manualCoverFile) : 'N/A',
       };
-  
-      const savedBooks = JSON.parse(localStorage.getItem('books') || '[]');
-      savedBooks.push(manualBook);
-      localStorage.setItem('books', JSON.stringify(savedBooks));
+      const bookExists = books.some((book) => book.id === manualBook.id);
+      if (bookExists) {
+        toast.error('Book already exists');
+        return;
+      }
+      updateBookData(manualBook);
       setSearchInput('');
       setBooks([]);
       setSelectedBookId('');
@@ -101,9 +103,12 @@ const AddBook = () => {
     } else {
       const selectedBook = books.find((book) => book.id === selectedBookId);
       if (selectedBook) {
-        const savedBooks = JSON.parse(localStorage.getItem('books') || '[]');
-        savedBooks.push(selectedBook);
-        localStorage.setItem('books', JSON.stringify(savedBooks));
+        const bookExists = books.some((book) => book.id === selectedBook.id);
+        if (bookExists) {
+          toast.error('Book already exists');
+          return;
+        }
+        updateBookData(selectedBook);
         setSearchInput('');
         setBooks([]);
         setSelectedBookId('');
@@ -266,7 +271,7 @@ const AddBook = () => {
           <div className="col">
             <button
               className="btn-default "
-              onClick={handleAddToLocalStorage}
+              onClick={handleAddBook}
               disabled={!selectedBookId && !manualAdd}>
               Add
             </button>
