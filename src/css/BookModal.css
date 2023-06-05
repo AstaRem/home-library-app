@@ -3,8 +3,16 @@ div.modal-header.row{
     margin-right: 0;
 }
 
+div.row.book_container{
+    height: 200px;
+}
 .closing_icon{
     padding: 0;
+}
+
+.book_details{
+    padding-left: 1rem;
+    padding-right: 0;
 }
 
 .book_title{
@@ -12,11 +20,22 @@ div.modal-header.row{
 }
 
 .OnLoan_book_cover {
+    height: 200px;
+    padding: 0;
+}
+
+.OnLoan_book_cover img{
+    border-radius: 5px; 
+    width: 100%;  
+}
+
+
+/* .OnLoan_book_cover {
     width: 80px;
     height: 90px;
     background-color: lightgrey;
     border-radius: 5px;
-}
+} */
 
 .book_name {
     font-weight: bold;
@@ -35,11 +54,11 @@ div.modal-header.row{
     justify-content: center;
 }
 
-.book-container, .checkbox-container {
+/* .book-container, .checkbox-container {
     display: flex;
     justify-content: flex-start;
     padding: 20px 20px 5px 20px;
-}
+} */
 
 .on-loan {
     margin-right: 2rem;

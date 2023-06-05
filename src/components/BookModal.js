@@ -89,16 +89,17 @@ function BookModal(props){
 
                 </div>
                 <div className="modal-body">
-                  <div className="row book-container ">
-                      <div className="OnLoan_book_cover col-4">
-                        <img src={formDataBookModel.cover} alt={formDataBookModel.title}/>
-                      </div>
-                      <div className="col-8"> 
-                        <h5>{formDataBookModel.author}</h5>
-                        <p>{formDataBookModel.description}</p>
-                      </div>
+                  <div class="container">
+                    <div className="row book_container justify-content-between ">
+                        <div className="OnLoan_book_cover col-3">
+                          <img src={formDataBookModel.cover} alt={formDataBookModel.title}/>
+                        </div>
+                        <div className="col-9 book_details"> 
+                          <h5>{formDataBookModel.author}</h5>
+                          <p>{formDataBookModel.description}</p>
+                        </div>
+                    </div>
                   </div>
-
                     <form ref={formBookInfo} onSubmit={handleSubmit} >
                       <div className="checkbox-container">
                         <div className="form-group form-check on-loan">
