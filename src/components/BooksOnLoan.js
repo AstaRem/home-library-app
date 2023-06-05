@@ -1,53 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import ContentWrapper from './ContentWrapper';
 import '../css/BooksOnLoan.css';
-import borrowedBooks from '../data/borrowedBookList.json';
 
-const BooksOnLoan = () => {
+const BooksOnLoan = (props) => {
 
-  //const borrBooks = borrowedBooks;
-  const [rows, setRows] = useState(borrowedBooks);
-  
 
+  //const [rows, setRows] = useState(borrowedBooks);
+  const [borrowedbookList, setborrowedbookList] = useState([]);
+
+  // Set ithe nitial date value in the input field
   useEffect(() => {
-    // Function to save JSON data to object storage
-    const saveDataToObjectStorage = async () => {
-      try {
-        await saveToStorage(borrowedBooks); 
-        console.log('Data saved to object storage.');
-      } catch (error) {
-        console.error('Error saving data to object storage:', error);
-      }
-    };
-    saveDataToObjectStorage();
-  }, []);
+    if (props.data !== null){
+      //Filter out which book(s) are on loan
+      const borrBooks = props.data.filter(book => book.onloan === true);
+      setborrowedbookList(borrBooks);
+    }
+  },[props.data]);
+  
+ // keep track of bookList
+ useEffect(() => {
+  console.log("borrowedbookList:", borrowedbookList);
+ }, [borrowedbookList]);
 
-  const returnedBook = (id) => {
-    const updatedRows = rows.filter(row => row.id !== id);
-    setRows(updatedRows);
-    saveToStorage(updatedRows);
-    // update  the main library data
+  const returnedBook = (returnedBook) => {
+    const updateReturnedbook = {
+      ...returnedBook,
+      onloan:false,
+      date_of_borrow:"",
+      borrower:""
+    }
+    props.updateBookData(updateReturnedbook);
   };
-
-  const saveToStorage=(jsonData)=>{
-    localStorage.setItem("borrBooks",JSON.stringify(jsonData));
-  }
 
   return (
   <ContentWrapper pageTitle="Books On Loan">
       <div className="booksOnLoan_borrowed_books">
           <ul className="booksOnLoan_borrowedBooksList">
-          {rows.map(row => (
-            <li key={row.id}>
+          {borrowedbookList.map(book => (
+            <li key={book.id}>
               <div className="booksOnLoan_image_holder column">
-                <img src={row.cover} alt={row.title} />
+                <img src={book.cover} alt={book.title} />
               </div>
               <div className="booksOnLoan_book_info column">
-                <p className="booksOnLoan_title">{row.title}</p>
-                <p className="booksOnLoan_author">{row.author}</p>
-                <div className="booksOnLoan_date_borrow"><span>Date of borrow</span>{row.date_of_borrow}</div>
+                <p className="booksOnLoan_title">{book.title}</p>
+                <p className="booksOnLoan_author">{book.author}</p>
+                <div className="booksOnLoan_date_borrow"><span>Date of borrow</span>{book.date_of_borrow}</div>
               </div>
-              <button type="button" className="btn-default" onClick={() =>returnedBook(row.id)}>Returned</button>
+              <button type="button" className="btn-default" onClick={() =>returnedBook(book)}>Returned</button>
             </li>
           ))}   
           </ul>
