@@ -143,7 +143,8 @@ const AddBook = ({ updateBookData }) => {
             
             <input
               type="text"
-              className="form-control"
+              className="form-control textInput"
+              aria-label="Search"
               id="searchInput"
               value={searchInput}
               onChange={handleInputChange}
@@ -210,7 +211,7 @@ const AddBook = ({ updateBookData }) => {
               <label htmlFor="manual-title">Title:</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control textInput"
                 id="manual-title"
                 value={manualTitle}
                 onChange={(e) => setManualTitle(e.target.value)}
@@ -220,7 +221,7 @@ const AddBook = ({ updateBookData }) => {
               <label htmlFor="manual-author">Author:</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control textInput"
                 id="manual-author"
                 value={manualAuthor}
                 onChange={(e) => setManualAuthor(e.target.value)}
@@ -230,7 +231,7 @@ const AddBook = ({ updateBookData }) => {
               <label htmlFor="manual-isbn">ISBN:</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control textInput"
                 id="manual-isbn"
                 value={manualISBN}
                 onChange={(e) => setManualISBN(e.target.value)}
@@ -239,7 +240,7 @@ const AddBook = ({ updateBookData }) => {
             <div className="form-group">
               <label htmlFor="manual-description">Description:</label>
               <textarea
-                className="form-control"
+                className="form-control textInput"
                 id="manual-description"
                 rows="3"
                 value={manualDescription}

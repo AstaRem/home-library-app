@@ -16,3 +16,26 @@
   border-radius: 20px;
   margin-bottom: 20px;
 }
+.textInput {
+  width:40% !important;
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.form-check-input:checked {
+  background-color: #FFAD4D;
+  border-color: #FFAD4D;
+}
+.form-check-input {
+  border-color: #FFAD4D;
+  --bs-border-width: 3px;
+}
+.form-control:disabled {
+  background-color:#A6A6A6;
+  color: white;
+}
+.form-control {
+border: var(--bs-border-width) solid #709F9D;
+--bs-border-width: 3px;
+background-color:#f8f9fa;
+}
