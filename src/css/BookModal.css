@@ -33,10 +33,6 @@ div.row.book_container{
     font-weight: bold;
 }
 
-/* #ratings_background{
-    background-color: rgba(0,0,0,0) !important;
-} */
-
 .modal_rating_wrapper {
     position: relative;
     margin-top: 10px;
@@ -98,5 +94,9 @@ div.checkbox-container.row {
 
 div.modal-footer {
     padding-bottom: 0;
+}
+
+.bookModal_cover {
+    border: 1px solid var(--light-grey);
 }
 

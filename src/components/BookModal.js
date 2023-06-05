@@ -99,7 +99,7 @@ function BookModal(props){
                         <div className="OnLoan_book_cover col-3">
                         
                         <div>
-                          <img src={formDataBookModel.cover} alt={formDataBookModel.title}/>
+                        <img src={formDataBookModel.cover} alt={formDataBookModel.title} className="bookModal_cover"/>
                         </div>
                           <div className="modal_rating_wrapper">
                               <Rating ratings={formDataBookModel.ratings}/>
