@@ -55,8 +55,8 @@ function App() {
         element={bookData.length > 0 ? <Home data={bookData} updateBookData = {updateBookData} /> : <Spinner/>}
           />
           <Route path="BooksOnLoan" element={<BooksOnLoan data={bookData} updateBookData = {updateBookData} />} />
-      
-          <Route path="AddBook" element={<AddBook />} />
+          <Route path="AddBook" element={<AddBook updateBookData={updateBookData} />} />
+
 
         </Routes>
       </div>
