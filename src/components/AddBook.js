@@ -94,8 +94,6 @@ const AddBook = ({ updateBookData }) => {
       const selectedBook = books.find((book) => book.id === selectedBookId);
       if (selectedBook) {
         updateBookData(selectedBook);
-        const savedBooks = JSON.parse(localStorage.getItem('books') || '[]');
-        savedBooks.push(selectedBook);
         setSearchInput('');
         setBooks([]);
         setSelectedBookId('');
