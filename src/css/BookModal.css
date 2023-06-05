@@ -4,7 +4,7 @@ div.modal-header.row{
 }
 
 div.row.book_container{
-    height: 200px;
+    height: 240px;
 }
 .closing_icon{
     padding: 0;
@@ -20,7 +20,7 @@ div.row.book_container{
 }
 
 .OnLoan_book_cover {
-    height: 200px;
+    height: 240px;
     padding: 0;
 }
 
@@ -31,6 +31,17 @@ div.row.book_container{
 
 .book_name {
     font-weight: bold;
+}
+
+/* #ratings_background{
+    background-color: rgba(0,0,0,0) !important;
+} */
+
+.modal_rating_wrapper {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-top: 0px;
 }
 
 .form-group{
