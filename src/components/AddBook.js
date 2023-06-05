@@ -123,7 +123,6 @@ const AddBook = ({ updateBookData }) => {
     setManualISBN('');
     setManualDescription('');
     setManualCoverFile('');
-    updateBookData(null);
   };
 
   return (
