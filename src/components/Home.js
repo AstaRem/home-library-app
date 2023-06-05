@@ -116,7 +116,10 @@ const Home = (props) => {
         <div className="container hero-banner text-center">
           <form id="home_form_book_search" onSubmit={searchLibrary} >
             <div className="row row_input">
+            <div className="search_input_wrapper">
+              <span className="reset"></span>
               <input className="form-control" type="text" placeholder="Please enter book title, author or ISBN" aria-label="Search" id="home_search_input" onChange= {(event)=> changeSearchInput(event) }/>
+              </div>
             </div>
             <button className="btn-default" type="submit" id="home_form_book_search_btn">SEARCH</button>
           </form>
@@ -159,11 +162,6 @@ const Home = (props) => {
         selectedBook={selectedBook_details}
         updateBookList = {updateBookList}
        />
-
-
-     {/* <searchLibrary
-       bookList={}
-       setbookList={} />  */}
     </div>
   )
 }
