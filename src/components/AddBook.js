@@ -17,7 +17,7 @@ const AddBook = () => {
   const [manualAuthor, setManualAuthor] = useState('');
   const [manualISBN, setManualISBN] = useState('');
   const [manualDescription, setManualDescription] = useState('');
-  const [coverFile, setCoverFile] = useState(null);
+  const [manualCoverFile, setManualCoverFile] = useState(null);
 
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
@@ -77,7 +77,7 @@ const AddBook = () => {
         author: manualAuthor || 'N/A',
         isbn: manualISBN || 'N/A',
         description: manualDescription || 'N/A',
-        coverFile: coverFile ? URL.createObjectURL(coverFile) : 'N/A',
+        manualCoverFile: manualCoverFile ? URL.createObjectURL(manualCoverFile) : 'N/A',
       };
   
       const savedBooks = JSON.parse(localStorage.getItem('books') || '[]');
@@ -91,6 +91,7 @@ const AddBook = () => {
       setManualAuthor('');
       setManualISBN('');
       setManualDescription('');
+      setManualCoverFile('');
       toast.success('Book added!');
     } else {
       const selectedBook = books.find((book) => book.id === selectedBookId);
@@ -116,6 +117,7 @@ const AddBook = () => {
     setManualAuthor('');
     setManualISBN('');
     setManualDescription('');
+    setManualCoverFile('');
   };
 
   return (
@@ -242,7 +244,7 @@ const AddBook = () => {
             <div className="form-group">
               <label htmlFor="manual-upload">Upload book cover:</label>
               <input type="file" className="form-control-file" id="manual-upload"
-              onChange={(e) => setCoverFile(e.target.files[0])} />
+              onChange={(e) => setManualCoverFile(e.target.files[0])} />
             </div>
           </div>
         )}
