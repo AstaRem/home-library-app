@@ -8,6 +8,7 @@ width: 200px !important;
 
 .hero-banner {
     padding: 60px 20px;
+    background:url("../assets/images/hero-banner-background.png") center center no-repeat;
 }
 
 .row_input {
@@ -15,11 +16,32 @@ width: 200px !important;
     align-items: center;
 }
 
+.search_input_wrapper {
+    position: relative;
+    display: inline-block;
+    padding:0;
+    min-width: 320px;
+    max-width: 450px;
+}
+
+.search_input_wrapper .reset {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    background: url("../assets/images/grey_close.png") center center no-repeat;
+    background-size: 16px 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 #home_search_input {
-    width:40% !important;
+   width: 100%;
     border-radius: 25px;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 42px;
+    transition: width 0.3s ease;
 }
 
 input::placeholder {

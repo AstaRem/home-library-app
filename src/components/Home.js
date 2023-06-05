@@ -46,9 +46,12 @@ const Home = (props) => {
         <div className="container hero-banner text-center">
           <form id="home_form_book_search">
             <div className="row row_input">
+            <div className="search_input_wrapper">
+              <span className="reset"></span>
               <input className="form-control" type="text" placeholder="Please enter book title, author or ISBN" aria-label="Search" id="home_search_input"/>
+              </div>
             </div>
-            <button className="btn-default" type="submit" id="home_form_book_search_btn">SEARCH</button>
+              <button className="btn-default" type="submit" id="home_form_book_search_btn">SEARCH</button>
           </form>
         </div>
       </section>

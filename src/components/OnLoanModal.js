@@ -18,7 +18,6 @@ function OnLoan (props){
   useEffect(() => {
     if (props.selectedItem !== null){
       setFormData(props.selectedItem);
-      //console.log("formData: " + JSON.stringify(formData));
     }
     if (props.selectedItem !== null && props.selectedItem.date_of_borrow!=="") {
       let d = new Date(props.selectedItem.date_of_borrow.split("/").reverse().join("-"));
