@@ -32,6 +32,19 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    console.log("bookData: " + JSON.stringify(bookData));
+  }, [bookData]);
+
+  // Update the book library 
+  const updateBookData = (updatedBook) => {
+    const bookIndex = bookData.findIndex((book) => book.id === updatedBook.id);
+    if (bookIndex !== -1) {
+      const updatedList = [...bookData];
+      updatedList[bookIndex] = updatedBook;
+      setBookData(updatedList);
+    }
+  }
 
   return (
     <Router>
@@ -39,7 +52,7 @@ function App() {
         <Header />
         <Routes>
         <Route path="/"
-        element={bookData.length > 0 ? <Home data={bookData} /> : <Spinner/>}
+        element={bookData.length > 0 ? <Home data={bookData} updateBookData = {updateBookData} /> : <Spinner/>}
           />
           <Route path="BooksOnLoan" element={<BooksOnLoan />} />
       
