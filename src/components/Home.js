@@ -35,6 +35,7 @@ const Home = (props) => {
         const updatedList = [...bookList];
         updatedList[bookIndex] = updatedBook;
         setBookList(updatedList);
+        props.updateBookData(updatedBook);
       }
     }
 
