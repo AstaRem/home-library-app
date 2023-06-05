@@ -63,7 +63,7 @@ const AddBook = () => {
   
   const handleAddToLocalStorage = () => {
     if (manualAdd) {
-      const inputCount = [manualTitle, manualAuthor, manualISBN, manualDescription].filter(Boolean).length;
+      const inputCount = [manualTitle, manualAuthor, manualISBN, manualDescription,manualCoverFile].filter(Boolean).length;
       if (inputCount === 0) {
         toast.error('Please provide at least one information');
         return;
