@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRectangleXmark } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/BookModal.css'
 
@@ -68,11 +70,23 @@ function BookModal(props){
           <div className="modal fade" id="bookModal" tabIndex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
             <div className="modal-dialog">
               <div className="modal-content">
-                <div className="modal-header">
-                <h5 className="modal-title text-center" id="bookModalLabel">{formDataBookModel.title}</h5>
-                  <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={() => onCloseModal()}>
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                <div className="modal-header row">
+                  <div class="book_title text-center col-11">
+                    <h5 className="modal-title " id="bookModalLabel">{formDataBookModel.title}</h5>
+                  </div> 
+                  <div class="col-1 closing_icon">
+                  <FontAwesomeIcon 
+                    icon={faRectangleXmark} 
+                    size="2xl" 
+                    style={{color: "#ffad4d",}} 
+                    type="button" 
+                    className="close" 
+                    data-dismiss="modal" 
+                    aria-label="Close" 
+                    onClick={() => onCloseModal()} 
+                  />  
+                  </div>           
+
                 </div>
                 <div className="modal-body">
                   <div className="row book-container ">
