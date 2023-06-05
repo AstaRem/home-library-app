@@ -24,7 +24,6 @@
     font-weight: bold;
 }
 
-
 div.OnLoan_book_cover {
     display: inline-block !important; 
   }
@@ -47,6 +46,10 @@ div.OnLoan_book_cover {
     display: flex;
 }
 
+div.container.loan_details{
+    padding-left:7px;
+}
+
 .borrower_input_field, .date_input_field{
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -60,6 +63,7 @@ div.OnLoan_book_cover {
     padding-right: 0 !important;
     margin-bottom: 2rem; 
 }
+
 
 form{
     padding-right: 0 !important;

@@ -1,8 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRectangleXmark } from '@fortawesome/free-solid-svg-icons';
+import Rating from './Rating';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../css/BookModal.css'
+import '../css/BookModal.css';
+// import '../css/Rating.css';
 
 function BookModal(props){
 
@@ -95,7 +97,13 @@ function BookModal(props){
                   <div class="container">
                     <div className="row book_container justify-content-between ">
                         <div className="OnLoan_book_cover col-3">
+                        
+                        <div>
                           <img src={formDataBookModel.cover} alt={formDataBookModel.title}/>
+                        </div>
+                          <div className="modal_rating_wrapper">
+                              <Rating ratings={formDataBookModel.ratings}/>
+                          </div>
                         </div>
                         <div className="col-9 book_details"> 
                           <h5>{formDataBookModel.author}</h5>
@@ -106,7 +114,6 @@ function BookModal(props){
 
                     <form ref={formBookInfo} onSubmit={handleSubmit} >
                     <div class="container loan_details">
-                    {/* <div class="row"></div> */}
                       <div className="checkbox-container row">
                         <div className="form-group form-check on-loan col-sm-4">
                             <input type="checkbox" className="form-check-input" id="isOnLoan" checked = {formDataBookModel.onloan || false} onChange={(event)=>onLoanChange(event)} />
@@ -124,7 +131,6 @@ function BookModal(props){
                         </p>
                       </div>
 
-                      
                           <div className="form-group ratings_container col-sm-4 ">
                             <label htmlFor="ratings" id="ratings_label">Ratings:</label>
                             <select className="form-control" id="ratings" value={formDataBookModel.ratings || 0} onChange={(event)=>onRatingsChange(event)}>
