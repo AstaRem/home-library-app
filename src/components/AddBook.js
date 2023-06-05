@@ -157,7 +157,7 @@ const AddBook = ({ updateBookData }) => {
             />
           </div>
           <div className="col-auto">
-            <button className="btn-default" onClick={handleSearch}>
+            <button className="btn-default" onClick={handleSearch}> 
               Search
             </button>
           </div>

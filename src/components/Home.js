@@ -45,70 +45,30 @@ const Home = (props) => {
     }
 
   //Function for searching Library
-
-
-  function searchLibrary(event){
-    event.preventDefault();
-    // const searchResults=[];
-
-    const searchResults = bookList.filter((book)=> book.title == query|| book.author == query|| book.ISBN == query);
-
-    // const splitQuery = query.split(" ");
-
-    // for (let i = 0; i < splitQuery.length; i++) {
-    //   const checkResults = bookList.filter((book)=> book.title == splitQuery[i]|| book.author == splitQuery[i]|| book.ISBN == splitQuery[i]);
-      
-    //   if(checkResults) {
-    //   // searchResults=[...searchResults,...checkResults];
-    
-    //   }
-    // }
-
-    // console.log("splitQuery",splitQuery);
-
-    console.log ("query" + query);
-    
-    console.log("searchResults: " + JSON.stringify(searchResults));
-
+  function searchLibrary(){
+    const searchResults = bookList.filter((book) => {
+      return (
+        book.title.toLowerCase().includes(query.toLowerCase()) ||
+        book.author.toLowerCase().includes(query.toLowerCase()) ||
+        book.ISBN.includes(query)
+      );
+    });
     setBookList(searchResults);
-
   }
 
   function resetLibrary(){
-
     setBookList(props.data);
-
+    setQuery("");
   }
 
   function changeSearchInput(event){
-   
      setQuery(event.target.value);
-     if (event.target.value=="") {
+     if (event.target.value==="") {
       resetLibrary();
-
+     }else{
+      searchLibrary(event)
      }
-
   }
-
-  // const[searchbookList, setSearchbookList]
-  // const searchbookList = filter.bookList
-
- 
-  
-
-//{bookList.filter}
-
-//}
-   // const searchLibrary=bookList.filter
-  //
-//const searchLibrary =(bookList) =>{}
-
-
-//setBookList(bookList);
-
-//const hand
-//onChange= {(e)=> setBooklist(e.target.value)}
-
 
   return (
     <div>
@@ -116,12 +76,11 @@ const Home = (props) => {
         <div className="container hero-banner text-center">
           <form id="home_form_book_search" onSubmit={searchLibrary} >
             <div className="row row_input">
-            <div className="search_input_wrapper">
-              <span className="reset"></span>
-              <input className="form-control" type="text" placeholder="Please enter book title, author or ISBN" aria-label="Search" id="home_search_input" onChange= {(event)=> changeSearchInput(event) }/>
+              <div div className="search_input_wrapper">
+                <span className="reset" onClick={() => resetLibrary()}></span>
+                <input className="form-control" type="text" placeholder="Please enter book title, author or ISBN" aria-label="Search" id="home_search_input" value = {query  || ""} onChange= {(event)=> changeSearchInput(event) }/>
               </div>
             </div>
-            <button className="btn-default" type="submit" id="home_form_book_search_btn">SEARCH</button>
           </form>
         </div>
       </section>
@@ -129,7 +88,6 @@ const Home = (props) => {
       <div className="container">
       <div className="home_btn_wrapper">
       <button type="button" className="btn-default" onClick={() => navigate("/AddBook")}>Add New Book</button>
-
       </div>
         <div className="row no-gutters">
           {bookList.map((book) => (
