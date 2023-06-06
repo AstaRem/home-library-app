@@ -15,6 +15,11 @@ div.row.book_container{
     padding-right: 0;
 }
 
+.des_wrapper{
+    height: 133px;
+    overflow: auto;
+}
+
 .book_title{
     font-size: 1.5rem;
 }
