@@ -8,7 +8,7 @@ import '../css/AddBook.css';
 const API_KEY = 'AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ';
 // const API_KEY = 'AIzaSyCQLHEacmhWROPybqvUY6B1lGYo0i2VoAA'; //Asta
 
-const AddBook = ({ updateBookData }) => {
+const AddBook = ({updateBookData}) => {
   const [searchInput, setSearchInput] = useState('');
   const [books, setBooks] = useState([]);
   const [selectedBookId, setSelectedBookId] = useState('');
@@ -29,8 +29,9 @@ const AddBook = ({ updateBookData }) => {
       toast.error('Please enter a search query');
       return;
     }
+    
  
-    let fullUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${searchInput}&key=${API_KEY}`
+    let fullUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchInput}&key=${API_KEY}`
     try {
       const response = await fetch(
         fullUrl
@@ -41,7 +42,7 @@ const AddBook = ({ updateBookData }) => {
       }
       const data = await response.json();
       console.log(fullUrl)
-      console.log(data);
+      console.log("data", data);
       const booksData = data.items.map((item) => ({
         id: item.id,
         title: item.volumeInfo.title,
@@ -103,11 +104,12 @@ const AddBook = ({ updateBookData }) => {
     } else {
       const selectedBook = books.find((book) => book.id === selectedBookId);
       if (selectedBook) {
-        const bookExists = books.some((book) => book.id === selectedBook.id);
-        if (bookExists) {
+        //const bookExists = books.some((book) => book.id === selectedBook.id);
+       /*  if (bookExists) {
           toast.error('Book already exists');
           return;
-        }
+        } */
+        console.log("selectedBook", selectedBook);
         updateBookData(selectedBook);
         setSearchInput('');
         setBooks([]);

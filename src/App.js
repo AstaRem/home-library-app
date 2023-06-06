@@ -38,11 +38,30 @@ function App() {
 
   // Update the book library 
   const updateBookData = (updatedBook) => {
+    console.log("run updateBookData", updatedBook);
     const bookIndex = bookData.findIndex((book) => book.id === updatedBook.id);
     if (bookIndex !== -1) {
       const updatedList = [...bookData];
       updatedList[bookIndex] = updatedBook;
       setBookData(updatedList);
+    }else{
+      const newBook = {
+        "id": updatedBook.id,
+        "title": updatedBook.title,
+        "author": updatedBook.authors,
+        "ISBN": updatedBook.ISBN,
+        "description": updatedBook.description,
+        "cover": updatedBook.coverUrl,
+        "onLoan": false,
+        "read":false,
+        "ratings":0,
+        "opinion":"",
+        "borrower":"",
+        "date_of_borrow":""
+      }
+      const NewBookList = [...bookData,newBook ];
+      setBookData(NewBookList);
+
     }
   }
 
