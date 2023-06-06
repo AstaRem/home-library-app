@@ -4,6 +4,7 @@ import OnLoan from './OnLoanModal';
 import BookModal from './BookModal';
 import '../css/Home.css';
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = (props) => {
 
@@ -13,6 +14,7 @@ const Home = (props) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedBook_details, setSelectedBook_details] = useState(null);
   const [query, setQuery]= useState ("");
+  const [noSearchResults, setNoSearchResults] = useState(false);
 
   // keep track of bookList
   useEffect(() => {
@@ -54,11 +56,15 @@ const Home = (props) => {
       );
     });
     setBookList(searchResults);
+    if(searchResults.length === 0){
+      setNoSearchResults(true);
+    }
   }
 
   function resetLibrary(){
     setBookList(props.data);
     setQuery("");
+    setNoSearchResults(false);
   }
 
   function changeSearchInput(event){
@@ -71,7 +77,7 @@ const Home = (props) => {
   }
 
   return (
-    <div>
+    <div className="home">
       <section className="jumbotron">
         <div className="container hero-banner text-center">
           <form id="home_form_book_search" onSubmit={searchLibrary} >
@@ -109,6 +115,10 @@ const Home = (props) => {
                 onOpenBookModal={openBookModal}
                 />
           ))}
+          <div className={`message_noResults ${noSearchResults ? "display" : ""}`}>
+            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass-arrow-right" className="icn_search_arrow" />
+            <span className="msg">Your library does not have this book.</span>
+            </div>
         </div>
       </div>
       </section>
