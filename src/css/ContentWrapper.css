@@ -1,7 +1,7 @@
 .content_wrapper {
     width: 100%;
     height: calc(100vh - 56px);
-/*     background: #E9EEF3 url("../assets/images/repeat_pattern.png") 0 0 repeat-x; */
+    background-color: var(--page-bkgd-color);
     padding-top: 35px;
     overflow: hidden;
 }
@@ -26,7 +26,6 @@
     color: #333;
     font-size: 32px;
     font-weight: 400;
-    /* padding: 0 0 12px 0; */
 }
 
 .content_wrapper .pageContent {
