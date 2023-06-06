@@ -2,9 +2,9 @@
     background-color: var(--secondary-color) !important;
 }
 
-.search-input {
+/* .search-input {
 width: 200px !important;
-}
+} */
 
 .hero-banner {
     padding: 60px 20px;
@@ -44,6 +44,7 @@ width: 200px !important;
     border-radius: 25px;
     padding-left: 15px;
     padding-right: 42px;
+    border: 1px solid var(--middle-grey);
 }
 
 
