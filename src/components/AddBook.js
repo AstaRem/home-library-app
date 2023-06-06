@@ -40,8 +40,8 @@ const AddBook = ({ updateBookData }) => {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      console.log(fullUrl)
-      console.log(data);
+      // console.log(fullUrl)
+      // console.log(data);
       const booksData = data.items.map((item) => ({
         id: item.id,
         title: item.volumeInfo.title,
@@ -162,7 +162,7 @@ const AddBook = ({ updateBookData }) => {
             </button>
           </div>
         </div>
-        {showResults && (
+        {/* {showResults && (
           <div className="search-results-container mt-3" >
             {books.map((book) => (
               <div className="card mb-3" key={book.id} >
@@ -196,7 +196,61 @@ const AddBook = ({ updateBookData }) => {
               </div>
             ))}
           </div>
+        )} */}
+                {showResults && (
+          <div className="search_results_container " >
+          {/* <div className="col-6 search-results_books_container"></div> */}
+            <ul className="search_results_list">
+              {books.map((book) => (
+                <li key={book.id} >
+                
+                <div className="row">
+
+                  <div className="form-check AB_radio_button_container col-6 ">
+                    <input
+                      type="radio"
+                      className="form-check-input"
+                      id={`radio-${book.id}`}
+                      name="book"
+                      value={book.id}
+                      checked={selectedBookId === book.id}
+                      onChange={handleRadioChange}
+                    />
+
+                  <div className="AB_book_info column">
+
+                    <label className="form-check-label" htmlFor={`radio-${book.id}`}>
+                      {book.title}
+                    </label>
+
+                    <p className="card-text">Author(s): {book.authors.join(", ")}</p>
+                    <p className="card-text">ISBN: {book.isbn}</p>
+
+                  </div>
+                  </div>
+                  </div>
+
+                  <div className="AddBook_image_container col-4 ">
+                    <img
+                      src={book.coverUrl}
+                      alt={book.title}
+                      className="book-thumbnail"
+                    />
+                  </div>
+
+                  
+              </li>
+            
+            ))}
+            </ul>
+          
+          </div>
+          
         )}
+
+
+
+
         <div className="row mt-3">
           <div className="col">
           <input
