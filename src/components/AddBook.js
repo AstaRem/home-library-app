@@ -136,7 +136,7 @@ const AddBook = ({updateBookData}) => {
     <ContentWrapper pageTitle="Add New Book"> 
       <div className="add-book">
         <div className="row">
-          <div className="col-8">
+          <div className="col-8 search_input_wrapper">
             
               <input
                 type="radio"
@@ -206,9 +206,9 @@ const AddBook = ({updateBookData}) => {
               {books.map((book) => (
                 <li key={book.id} >
                 
-                <div className="row">
+                <div className="row book_row">
 
-                <div className="AddBook_image_container col-4 ">
+                <div className="AddBook_image_container col-sm-4 col-md-2">
                     <img
                       src={book.coverUrl}
                       alt={book.title}
@@ -217,7 +217,7 @@ const AddBook = ({updateBookData}) => {
                   </div>
 
 
-                  <div className="form-check AddBook_radio_button_container col-6 ">
+                  <div className="form-check AddBook_radio_button_container col-sm-8 col-md-10">
                     <input
                       type="radio"
                       className="form-check-input"
