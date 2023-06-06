@@ -76,6 +76,12 @@ const Home = (props) => {
      }
   }
 
+  const removeBook = (book_remove) => {
+    const updatedBookList = bookList.filter((book) => book.id !== book_remove.id);
+    setBookList(updatedBookList);
+    props.removeBook(book_remove);
+  }
+
   return (
     <div className="home">
       <section className="jumbotron">
@@ -129,6 +135,7 @@ const Home = (props) => {
       <BookModal
         selectedBook={selectedBook_details}
         updateBookList = {updateBookList}
+        removeBook = {removeBook}
        />
     </div>
   )
