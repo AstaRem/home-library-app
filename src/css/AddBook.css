@@ -7,17 +7,27 @@
 }
 
 .search_results_container{
-  background-color: #F1F1F1;
-  border: var(--light-grey) solid 1px;
-  border-radius: 5px;
+  /* background-color: #F1F1F1;
+  border: var(--light-grey) solid 1px; */
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  margin-left: 0;
+  padding: 1rem 1rem 1rem 0;
 }
 
 ul{
   list-style: none;
+}
+
+.book_row{
+  /* border-bottom: var(--light-grey) solid 1px; */
+  margin-bottom: 1rem;
+  background-color: #F1F1F1;
+  border: var(--light-grey) solid 1px;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+
 }
 
 .AddBook_image_container img{
@@ -29,7 +39,12 @@ ul{
   margin-top: 1rem;
 }
 
-.search_button{
+.search_button_container, .search_input_wrapper{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.form-check-input {
+  margin-right: 1rem;
 }
