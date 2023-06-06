@@ -107,7 +107,10 @@ function BookModal(props){
                         </div>
                         <div className="col-9 book_details"> 
                           <h5>{formDataBookModel.author}</h5>
-                          <p>{formDataBookModel.description}</p>
+                          <div className="des_wrapper">
+                            <p>{formDataBookModel.description}</p>
+                          </div>
+                          
                         </div>
                     </div>
                   </div>
