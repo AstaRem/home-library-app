@@ -166,7 +166,7 @@ const AddBook = ({updateBookData}) => {
             
               <input
                 type="radio"
-                className="form-check-input"
+                className="form-check-input position-static"
                 id="radio-search"
                 name="radio"
                 value="search"
@@ -248,7 +248,7 @@ const AddBook = ({updateBookData}) => {
           <div className="col">
           <input
   type="radio"
-  className="form-check-input"
+  className="form-check-input position-static"
   id="radio-manual"
   name="radio"
   value="manual"
@@ -261,7 +261,9 @@ const AddBook = ({updateBookData}) => {
     setShowResults(false);
   }}
 />   
-            <h6>Add Manually</h6>
+<label class="form-check-label" for="gridRadios1">
+          Add Manually
+        </label>     
           </div>
           <div className="col"></div>
         </div>
