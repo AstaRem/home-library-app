@@ -65,13 +65,18 @@ function App() {
     }
   }
 
+  const removeBook_in_lib=(book_remove) => {
+    const updatedBookList = bookData.filter((book) => book.id !== book_remove.id);
+    setBookData(updatedBookList);
+  }
+
   return (
     <Router>
       <div>
         <Header />
         <Routes>
         <Route path="/"
-        element={bookData.length > 0 ? <Home data={bookData} updateBookData = {updateBookData} /> : <Spinner/>}
+        element={bookData.length > 0 ? <Home data={bookData} updateBookData = {updateBookData} removeBook={removeBook_in_lib}/> : <Spinner/>}
           />
           <Route path="BooksOnLoan" element={<BooksOnLoan data={bookData} updateBookData = {updateBookData} />} />
           <Route path="AddBook" element={<AddBook updateBookData={updateBookData} />} />

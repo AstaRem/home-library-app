@@ -30,6 +30,11 @@ function BookModal(props){
     }, 100);
    }
 
+   // Remove book card
+   const removeBookCard = (selectedBook)=>{
+    props.removeBook(selectedBook);
+   }
+
    const onLoanChange = (event) => {
     setFormDataBookModel({
       ...formDataBookModel,
@@ -76,10 +81,10 @@ function BookModal(props){
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header row">
-                  <div class="book_title text-center col-11">
+                  <div className="book_title text-center col-11">
                     <h5 className="modal-title " id="bookModalLabel">{formDataBookModel.title}</h5>
                   </div> 
-                  <div class="col-1 closing_icon">
+                  <div className="col-1 closing_icon">
                   <FontAwesomeIcon 
                     icon={faRectangleXmark} 
                     size="2xl" 
@@ -94,7 +99,7 @@ function BookModal(props){
 
                 </div>
                 <div className="modal-body">
-                  <div class="container">
+                  <div className="container">
                     <div className="row book_container justify-content-between ">
                         <div className="OnLoan_book_cover col-3">
                         
@@ -116,7 +121,7 @@ function BookModal(props){
                   </div>
 
                     <form ref={formBookInfo} onSubmit={handleSubmit} >
-                    <div class="container loan_details">
+                    <div className="container loan_details">
                       <div className="checkbox-container row">
                         <div className="form-group form-check on-loan col-sm-4">
                             <input type="checkbox" className="form-check-input" id="isOnLoan" checked = {formDataBookModel.onloan || false} onChange={(event)=>onLoanChange(event)} />
@@ -145,16 +150,14 @@ function BookModal(props){
                                   <option>5</option>
                             </select>
                           </div>
-                        
-                        
                           <div className="form-group my-notes ">
                             <label htmlFor="name_of_borrower" className="name_of_borrower">My notes:</label>
                             <textarea className="form-control" id="name_of_borrower" rows="4" value={formDataBookModel.opinion || ""} onChange={(event)=>inputOpinionChange(event)}> 
                             </textarea>
                           </div>
                         </div>
-
                           <div className="modal-footer justify-content-end">
+                            <button type="button" className="btn-default" data-dismiss="modal" onClick={() => removeBookCard(props.selectedBook)}>Delete</button>
                             <button type="submit" className="btn-default btn-save-add">Save</button>
                           </div>
                     </form>

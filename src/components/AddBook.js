@@ -267,51 +267,72 @@ const AddBook = ({updateBookData}) => {
         </div>
         {manualAdd && (
           <div className="manual-add-container mt-3">
-            <div className="form-group">
-              <label htmlFor="manual-title">Title:</label>
-              <input
-                type="text"
-                className="form-control"
-                id="manual-title"
-                value={manualTitle}
-                onChange={(e) => setManualTitle(e.target.value)}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="manual-author">Author:</label>
-              <input
-                type="text"
-                className="form-control"
-                id="manual-author"
-                value={manualAuthor}
-                onChange={(e) => setManualAuthor(e.target.value)}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="manual-isbn">ISBN:</label>
-              <input
-                type="text"
-                className="form-control"
-                id="manual-isbn"
-                value={manualISBN}
-                onChange={(e) => setManualISBN(e.target.value)}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="manual-description">Description:</label>
-              <textarea
-                className="form-control"
-                id="manual-description"
-                rows="3"
-                value={manualDescription}
-                onChange={(e) => setManualDescription(e.target.value)}
-              ></textarea>
-            </div>
-            <div className="form-group">
-              <label htmlFor="manual-upload">Upload book cover:</label>
-              <input type="file" className="form-control-file" id="manual-upload"
-              onChange={(e) => setManualCoverFile(e.target.files[0])} />
-            </div>
+            <form>
+  <div className="form-group row">
+    <label htmlFor="manual-title" className="col-sm-2 col-form-label">Title</label>
+    <div className="col-sm-10">
+      <input
+        className="form-control"
+        type="text"
+        id="manual-title"
+        value={manualTitle}
+        onChange={(e) => setManualTitle(e.target.value)}
+      />
+    </div>
+  </div>
+
+  <div className="form-group row">
+    <label htmlFor="manual-author" className="col-sm-2 col-form-label">Author</label>
+    <div className="col-sm-10">
+      <input
+        className="form-control"
+        type="text"
+        id="manual-author"
+        value={manualAuthor}
+        onChange={(e) => setManualAuthor(e.target.value)}
+      />
+    </div>
+  </div>
+
+  <div className="form-group row">
+    <label htmlFor="manual-isbn" className="col-sm-2 col-form-label">ISBN</label>
+    <div className="col-sm-10">
+      <input
+        className="form-control"
+        type="text"
+        id="manual-isbn"
+        value={manualISBN}
+        onChange={(e) => setManualISBN(e.target.value)}
+      />
+    </div>
+  </div>
+
+  <div className="form-group row">
+    <label htmlFor="manual-description" className="col-sm-2 col-form-label">Description</label>
+    <div className="col-sm-10">
+      <textarea
+        className="form-control"
+        id="manual-description"
+        rows="3"
+        value={manualDescription}
+        onChange={(e) => setManualDescription(e.target.value)}
+      ></textarea>
+    </div>
+  </div>
+
+  <div className="form-group row">
+    <label htmlFor="manual-upload" className="col-sm-2 col-form-label">Upload Book Cover:</label>
+    <div className="col-sm-10">
+      <input
+        type="file"
+        className="form-control-file"
+        id="manual-upload"
+        onChange={(e) => setManualCoverFile(e.target.files[0])}
+      />
+    </div>
+  </div>
+</form>
+
           </div>
         )}
         <div className="row mt-3">
