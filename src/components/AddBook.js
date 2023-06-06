@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ContentWrapper from './ContentWrapper';
 import '../css/AddBook.css';
 
-const API_KEY = 'AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ';
+// const API_KEY = 'AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ';
 // const API_KEY = 'AIzaSyCQLHEacmhWROPybqvUY6B1lGYo0i2VoAA'; //Asta
 
 const AddBook = ({updateBookData}) => {
@@ -30,38 +30,64 @@ const AddBook = ({updateBookData}) => {
       return;
     }
     
+    const baseApiUrl = 'https://www.googleapis.com/books/v1/volumes';
+    const apiKey = 'AIzaSyBNZW4NF0E0ISmTN7HQbwaHL6aRB3QIpqQ';
  
-    let fullUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${searchInput}&key=${API_KEY}`
     try {
-      const response = await fetch(
-        fullUrl
-        // `https://www.googleapis.com/books/v1/volumes?q=isbn:${searchInput}&key=${API_KEY}`  //Asta - added isbn: api requires it
-      );
-      if (!response.ok) {
+      const isbnUrl = `${baseApiUrl}?q=isbn:${searchInput}&key=${apiKey}`;
+      const titleUrl = `${baseApiUrl}?q=intitle:${searchInput}&key=${apiKey}`;
+      const authorUrl = `${baseApiUrl}?q=inauthor:${searchInput}&key=${apiKey}`;
+
+
+      const [isbnResponse, titleResponse, authorResponse] = await Promise.all([
+        fetch(isbnUrl),
+        fetch(titleUrl),
+        fetch(authorUrl),
+      ]);
+
+      if (!isbnResponse.ok || !titleResponse.ok || !authorResponse.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
-      console.log(fullUrl)
-      console.log("data", data);
-      const booksData = data.items.map((item) => ({
-        id: item.id,
-        title: item.volumeInfo.title,
-        authors: item.volumeInfo.authors || [],
-        isbn: item.volumeInfo.industryIdentifiers
-          ? item.volumeInfo.industryIdentifiers[0].identifier
-          : 'N/A',
-        description: item.volumeInfo.description || 'N/A',
-        // response.items[0].volumeInfo.imageLinks.thumbnail
-        coverUrl: item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail
-          ? item.volumeInfo.imageLinks.thumbnail
-          : 'N/A',
-      }));
+
+      const [isbnData, titleData, authorData] = await Promise.all([
+        isbnResponse.json(),
+        titleResponse.json(),
+        authorResponse.json(),
+      ]);
+
+      const booksData = [
+        ...showBooksData(isbnData),
+        ...showBooksData(titleData),
+        ...showBooksData(authorData),
+      ];
+
       setBooks(booksData);
       setShowResults(true);
     } catch (error) {
       console.error('Error:', error);
     }
   };
+
+  const showBooksData = (data) => {
+    if (!data.items) {
+      return [];
+    }
+  
+    return data.items.map((item) => ({
+      id: item.id,
+      title: item.volumeInfo.title,
+      authors: item.volumeInfo.authors || [],
+      isbn: item.volumeInfo.industryIdentifiers
+        ? item.volumeInfo.industryIdentifiers[0].identifier
+        : 'N/A',
+      description: item.volumeInfo.description || 'N/A',
+      coverUrl:
+        item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail
+          ? item.volumeInfo.imageLinks.thumbnail
+          : 'N/A',
+    }));
+  };
+
 
   const handleRadioChange = (event) => {
     setSelectedBookId(event.target.value);
@@ -164,44 +190,8 @@ const AddBook = ({updateBookData}) => {
             </button>
           </div>
         </div>
-        {/* {showResults && (
-          <div className="search-results-container mt-3" >
-            {books.map((book) => (
-              <div className="card mb-3" key={book.id} >
-                
-                <div className="card-body ">
-                  <div className="form-check">
-                    <input
-                      type="radio"
-                      className="form-check-input"
-                      id={`radio-${book.id}`}
-                      name="book"
-                      value={book.id}
-                      checked={selectedBookId === book.id}
-                      onChange={handleRadioChange}
-                    />
-                    <label className="form-check-label" htmlFor={`radio-${book.id}`}>
-                      {book.title}
-                    </label>
-                  </div>
-
-                  <div>
-                    <img
-                      src={book.coverUrl}
-                      alt={book.title}
-                      className="book-thumbnail"
-                    />
-                  </div>
-                  <p className="card-text">Author(s): {book.authors.join(", ")}</p>
-                  <p className="card-text">ISBN: {book.isbn}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        )} */}
                 {showResults && (
           <div className="search_results_container " >
-          {/* <div className="col-6 search-results_books_container"></div> */}
             <ul className="search_results_list">
               {books.map((book) => (
                 <li key={book.id} >
@@ -215,7 +205,6 @@ const AddBook = ({updateBookData}) => {
                       className="book-thumbnail"
                     />
                   </div>
-
 
                   <div className="form-check AddBook_radio_button_container col-sm-8 col-md-10">
                     <input
