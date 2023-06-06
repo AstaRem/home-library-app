@@ -136,7 +136,7 @@ const AddBook = ({updateBookData}) => {
     <ContentWrapper pageTitle="Add New Book"> 
       <div className="add-book">
         <div className="row">
-          <div className="col">
+          <div className="col-8">
             
               <input
                 type="radio"
@@ -158,7 +158,7 @@ const AddBook = ({updateBookData}) => {
               disabled={manualAdd}
             />
           </div>
-          <div className="col-auto">
+          <div className="col-4 search_button_container">
             <button className="btn-default" onClick={handleSearch}> 
               Search
             </button>
@@ -208,7 +208,16 @@ const AddBook = ({updateBookData}) => {
                 
                 <div className="row">
 
-                  <div className="form-check AB_radio_button_container col-6 ">
+                <div className="AddBook_image_container col-4 ">
+                    <img
+                      src={book.coverUrl}
+                      alt={book.title}
+                      className="book-thumbnail"
+                    />
+                  </div>
+
+
+                  <div className="form-check AddBook_radio_button_container col-6 ">
                     <input
                       type="radio"
                       className="form-check-input"
@@ -219,7 +228,7 @@ const AddBook = ({updateBookData}) => {
                       onChange={handleRadioChange}
                     />
 
-                  <div className="AB_book_info column">
+                  <div className="AddBook_book_info column">
 
                     <label className="form-check-label" htmlFor={`radio-${book.id}`}>
                       {book.title}
@@ -230,16 +239,9 @@ const AddBook = ({updateBookData}) => {
 
                   </div>
                   </div>
-                  </div>
+                 
 
-                  <div className="AddBook_image_container col-4 ">
-                    <img
-                      src={book.coverUrl}
-                      alt={book.title}
-                      className="book-thumbnail"
-                    />
-                  </div>
-
+                </div>
                   
               </li>
             
