@@ -7,7 +7,8 @@
 }
 
 .search_results_container{
-  background-color: var(--disabled_label);
+  background-color: #F1F1F1;
+  border: var(--light-grey) solid 1px;
   border-radius: 5px;
   width: 100%;
   margin-top: 1rem;
@@ -21,5 +22,9 @@ ul{
 
 .AddBook_image_container img{
   border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.AddBook_radio_button_container{
   margin-top: 1rem;
 }
