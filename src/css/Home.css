@@ -1,3 +1,7 @@
+.home {
+    font-family: "Roboto", sans-serif;
+}
+
 .jumbotron{
     background-color: var(--secondary-color) !important;
 }
@@ -67,4 +71,30 @@ input::placeholder {
     justify-content: flex-end;
     align-items: center;
     padding: 0 20px 40px 20px;
+}
+
+.message_noResults {
+    display: none;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--charcoal);
+    background-color:#f1f1f1;
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.message_noResults.display {
+    display: block;
+}
+
+.msg {
+    margin-left: 10px;
+}
+
+.icn_search_arrow{
+    color:var(--middle-grey);
 }
