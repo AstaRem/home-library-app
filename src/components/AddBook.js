@@ -261,7 +261,7 @@ const AddBook = ({updateBookData}) => {
     setShowResults(false);
   }}
 />   
-<label class="form-check-label" for="gridRadios1">
+<label class="form-check-label" htmlFor="manual-radio">
           Add Manually
         </label>     
           </div>
