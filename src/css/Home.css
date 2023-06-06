@@ -2,10 +2,6 @@
     background-color: var(--secondary-color) !important;
 }
 
-/* .search-input {
-width: 200px !important;
-} */
-
 .hero-banner {
     padding: 60px 20px;
     background:url("../assets/images/hero-banner-background.png") center center no-repeat;
@@ -58,10 +54,12 @@ input::placeholder {
 
 .section_library {
     padding: 40px 20px;
+    background-color: var(--page-bkgd-color);
 }
 
 .section_library .container {
-    background-color: #FFF;
+    background-color: var(--page-bkgd-color);
+    height: 100vh;
 }
 
 .home_btn_wrapper {
@@ -70,11 +68,3 @@ input::placeholder {
     align-items: center;
     padding: 0 20px 40px 20px;
 }
-
-
-
-
-
-
-
-  
