@@ -31,7 +31,7 @@ const AddBook = ({updateBookData}) => {
     }
     
  
-    let fullUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchInput}&key=${API_KEY}`
+    let fullUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${searchInput}&key=${API_KEY}`
     try {
       const response = await fetch(
         fullUrl
