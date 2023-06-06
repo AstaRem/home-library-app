@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #567D89; /** nav-bar-color**/
+  --primary-color: #496a72; /** nav-bar-color**/
   --secondary-color: #709F9D;/** jumbotron-color**/
   --nav-item-color: #A6EAE7;
   --orange-yellow:#FFAD4D;/** default button color**/
@@ -44,6 +44,7 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
   pointer-events: auto;
+  text-shadow: 1px 1px 2px #6a6a6a;
 }
 
 .btn-save-add{
