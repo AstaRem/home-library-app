@@ -173,6 +173,7 @@ const AddBook = ({updateBookData}) => {
   return (
     <ContentWrapper pageTitle="Add New Book"> 
       <div className="add-book">
+        <div className="search-container "> 
         <div className="row">
           <div className="col-6 search_input_wrapper">
             
@@ -350,7 +351,7 @@ const AddBook = ({updateBookData}) => {
           </div>
           
         )}
-       
+       </div>
 <div className="d-flex justify-content-center">
 <form>
   <div className="form-row">
