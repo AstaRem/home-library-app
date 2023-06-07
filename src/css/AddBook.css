@@ -41,9 +41,9 @@ ul{
   margin-top: 1rem;
 }
 
-.search_button_container, .search_input_wrapper{
+.search_button_container, .search_input_wrapper, .manual_input_wrapper, .manual_empty_container  {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 .form-check-input {
@@ -54,7 +54,7 @@ ul{
 }
 
 .textInput {
-  width:50% !important;
+  width:80% !important;
   border-radius: 25px;
   padding-left: 15px;
   padding-right: 15px;

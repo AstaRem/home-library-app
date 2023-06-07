@@ -174,7 +174,7 @@ const AddBook = ({updateBookData}) => {
     <ContentWrapper pageTitle="Add New Book"> 
       <div className="add-book">
         <div className="row">
-          <div className="col-8 search_input_wrapper">
+          <div className="col-6 search_input_wrapper">
             
               <input
                 type="radio"
@@ -192,11 +192,11 @@ const AddBook = ({updateBookData}) => {
               id="searchInput"
               value={searchInput}
               onChange={handleInputChange}
-              placeholder="Book title, author or ISBN "
+              placeholder="Please enter book title, author or ISBN "
               disabled={manualAdd}
             />
           </div>
-          <div className="col-4 search_button_container">
+          <div className="col-6 search_button_container">
             <button className="btn-default" onClick={handleSearch}> 
               Search
             </button>
@@ -253,8 +253,8 @@ const AddBook = ({updateBookData}) => {
           
         )}
 
-        <div className="row mt-3">
-          <div className="col">
+        <div className="row">
+          <div className="col-6 manual_input_wrapper">
           <input
   type="radio"
   className="form-check-input"
@@ -272,9 +272,11 @@ const AddBook = ({updateBookData}) => {
 />   
 <label className="form-check-label" htmlFor="manual-radio">
           Add Manually
-        </label>     
+        </label>
+</div> 
+<div className="col-6 manual_empty_container">
+   
           </div>
-          <div className="col"></div>
         </div>
         {manualAdd && (
           <div className="manual-add-container mt-3">
