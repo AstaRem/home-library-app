@@ -53,6 +53,9 @@ padding-top: 3rem;
 .d-flex {
   padding: 3rem;
 }
+.search_button_container {
+  align-items: end;
+}
 .form-check-input {
   margin-top: 0.35rem;
   margin-right: 0.5rem;
