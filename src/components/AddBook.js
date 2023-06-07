@@ -344,7 +344,7 @@ const AddBook = ({updateBookData}) => {
       <div className="row">
         <div className="col">
           <button
-            className="btn-default"
+            className="btn-default btn-save-add"
             onClick={handleAddBook}
             disabled={!selectedBookId && !manualAdd}
           >
