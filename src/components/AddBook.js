@@ -166,7 +166,7 @@ const AddBook = ({updateBookData}) => {
             
               <input
                 type="radio"
-                className="form-check-input position-static"
+                className="form-check-input"
                 id="radio-search"
                 name="radio"
                 value="search"
@@ -176,7 +176,7 @@ const AddBook = ({updateBookData}) => {
             
             <input
               type="text"
-              className="form-control"
+              className="form-control textInput"
               id="searchInput"
               value={searchInput}
               onChange={handleInputChange}
@@ -241,14 +241,11 @@ const AddBook = ({updateBookData}) => {
           
         )}
 
-
-
-
         <div className="row mt-3">
           <div className="col">
           <input
   type="radio"
-  className="form-check-input position-static"
+  className="form-check-input"
   id="radio-manual"
   name="radio"
   value="manual"
@@ -261,7 +258,7 @@ const AddBook = ({updateBookData}) => {
     setShowResults(false);
   }}
 />   
-<label class="form-check-label" htmlFor="manual-radio">
+<label className="form-check-label" htmlFor="manual-radio">
           Add Manually
         </label>     
           </div>
@@ -274,7 +271,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-title" className="col-sm-2 col-form-label">Title</label>
     <div className="col-sm-10">
       <input
-        className="form-control"
+        className="form-control textInput"
         type="text"
         id="manual-title"
         value={manualTitle}
@@ -287,7 +284,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-author" className="col-sm-2 col-form-label">Author</label>
     <div className="col-sm-10">
       <input
-        className="form-control"
+        className="form-control textInput"
         type="text"
         id="manual-author"
         value={manualAuthor}
@@ -300,7 +297,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-isbn" className="col-sm-2 col-form-label">ISBN</label>
     <div className="col-sm-10">
       <input
-        className="form-control"
+        className="form-control textInput"
         type="text"
         id="manual-isbn"
         value={manualISBN}
@@ -313,7 +310,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-description" className="col-sm-2 col-form-label">Description</label>
     <div className="col-sm-10">
       <textarea
-        className="form-control"
+        className="form-control textInput"
         id="manual-description"
         rows="3"
         value={manualDescription}
@@ -327,31 +324,44 @@ const AddBook = ({updateBookData}) => {
     <div className="col-sm-10">
       <input
         type="file"
-        className="form-control-file"
+        className="form-control-file textInput"
         id="manual-upload"
         onChange={(e) => setManualCoverFile(e.target.files[0])}
       />
     </div>
   </div>
+  
 </form>
 
           </div>
+          
         )}
-        <div className="row mt-3">
-          <div className="col">
-            <button
-              className="btn-default "
-              onClick={handleAddBook}
-              disabled={!selectedBookId && !manualAdd}>
-              Add
-            </button>
-          </div>
-          <div className="col">
-            <button className="btn-default" onClick={handleCancel}>
-              Cancel
-            </button>
-          </div>
+       
+<div className="d-flex justify-content-center">
+<form>
+  <div className="form-row">
+    <div className="col">
+      <div className="row">
+        <div className="col">
+          <button
+            className="btn-default"
+            onClick={handleAddBook}
+            disabled={!selectedBookId && !manualAdd}
+          >
+            Add
+          </button>
         </div>
+        <div className="col">
+          <button className="btn-default" onClick={handleCancel}>
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
       </div>
       <ToastContainer />
       </ContentWrapper>
