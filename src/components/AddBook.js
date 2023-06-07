@@ -26,7 +26,9 @@ const AddBook = ({updateBookData}) => {
 
   const handleSearch = async () => {
     if (searchInput.trim() === '') {
-      toast.error('Please enter a search query');
+      toast.error('Type in what you are looking for', {
+        position: toast.POSITION.TOP_CENTER
+      });
       return;
     }
     
@@ -97,7 +99,9 @@ const AddBook = ({updateBookData}) => {
     if (manualAdd) {
       const inputCount = [manualTitle, manualAuthor, manualISBN, manualDescription,manualCoverFile].filter(Boolean).length;
       if (inputCount === 0) {
-        toast.error('Please provide at least one information');
+        toast.error('Please provide at least one information', {
+          position: toast.POSITION.TOP_CENTER
+        });
         return;
       } }
   
@@ -113,7 +117,9 @@ const AddBook = ({updateBookData}) => {
       };
       const bookExists = books.some((book) => book.id === manualBook.id);
       if (bookExists) {
-        toast.error('Book already exists');
+        toast.error('Book already exists', {
+          position: toast.POSITION.TOP_CENTER
+        });
         return;
       }
       updateBookData(manualBook);
@@ -126,13 +132,17 @@ const AddBook = ({updateBookData}) => {
       setManualISBN('');
       setManualDescription('');
       setManualCoverFile('');
-      toast.success('Book added!');
+      toast.success('Book added!', {
+        position: toast.POSITION.TOP_CENTER
+      });
     } else {
       const selectedBook = books.find((book) => book.id === selectedBookId);
       if (selectedBook) {
         //const bookExists = books.some((book) => book.id === selectedBook.id);
        /*  if (bookExists) {
-          toast.error('Book already exists');
+          toast.error('Book already exists', {
+        position: toast.POSITION.TOP_CENTER
+      });
           return;
         } */
         console.log("selectedBook", selectedBook);
@@ -141,7 +151,9 @@ const AddBook = ({updateBookData}) => {
         setBooks([]);
         setSelectedBookId('');
         setShowResults(false);
-        toast.success('Book added!');
+        toast.success('Book added!', {
+          position: toast.POSITION.TOP_CENTER
+        });
       }
     }
   };  
@@ -363,7 +375,7 @@ const AddBook = ({updateBookData}) => {
 </div>
 
       </div>
-      <ToastContainer />
+      <ToastContainer autoClose={1000}/>
       </ContentWrapper>
   );
 };

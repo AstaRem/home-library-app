@@ -74,3 +74,7 @@ border: var(--bs-border-width) solid #709F9D;
 --bs-border-width: 3px;
 background-color:#f8f9fa;
 }
+:root {
+--toastify-color-success: #FFAD4D;
+--toastify-color-error: #FFCF26;
+}
