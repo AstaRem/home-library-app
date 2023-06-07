@@ -48,6 +48,7 @@ const Home = (props) => {
 
   //Function for searching Library
   function searchLibrary(){
+    console.log("booklist_searchLib:", bookList);
     const searchResults = bookList.filter((book) => {
       return (
         book.title.toLowerCase().includes(query.toLowerCase()) ||

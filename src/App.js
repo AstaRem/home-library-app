@@ -48,8 +48,8 @@ function App() {
       const newBook = {
         "id": updatedBook.id,
         "title": updatedBook.title,
-        "author": updatedBook.authors,
-        "ISBN": updatedBook.ISBN,
+        "author": updatedBook.authors[0],
+        "ISBN": updatedBook.isbn,
         "description": updatedBook.description,
         "cover": updatedBook.coverUrl,
         "onLoan": false,
