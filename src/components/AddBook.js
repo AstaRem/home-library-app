@@ -26,7 +26,9 @@ const AddBook = ({updateBookData}) => {
 
   const handleSearch = async () => {
     if (searchInput.trim() === '') {
-      toast.error('Please enter a search query');
+      toast.error('Type in what you are looking for', {
+        position: toast.POSITION.TOP_CENTER
+      });
       return;
     }
     
@@ -97,7 +99,9 @@ const AddBook = ({updateBookData}) => {
     if (manualAdd) {
       const inputCount = [manualTitle, manualAuthor, manualISBN, manualDescription,manualCoverFile].filter(Boolean).length;
       if (inputCount === 0) {
-        toast.error('Please provide at least one information');
+        toast.error('Please provide at least one information', {
+          position: toast.POSITION.TOP_CENTER
+        });
         return;
       } }
   
@@ -113,7 +117,9 @@ const AddBook = ({updateBookData}) => {
       };
       const bookExists = books.some((book) => book.id === manualBook.id);
       if (bookExists) {
-        toast.error('Book already exists');
+        toast.error('Book already exists', {
+          position: toast.POSITION.TOP_CENTER
+        });
         return;
       }
       updateBookData(manualBook);
@@ -126,13 +132,17 @@ const AddBook = ({updateBookData}) => {
       setManualISBN('');
       setManualDescription('');
       setManualCoverFile('');
-      toast.success('Book added!');
+      toast.success('Book added!', {
+        position: toast.POSITION.TOP_CENTER
+      });
     } else {
       const selectedBook = books.find((book) => book.id === selectedBookId);
       if (selectedBook) {
         //const bookExists = books.some((book) => book.id === selectedBook.id);
        /*  if (bookExists) {
-          toast.error('Book already exists');
+          toast.error('Book already exists', {
+        position: toast.POSITION.TOP_CENTER
+      });
           return;
         } */
         console.log("selectedBook", selectedBook);
@@ -141,7 +151,9 @@ const AddBook = ({updateBookData}) => {
         setBooks([]);
         setSelectedBookId('');
         setShowResults(false);
-        toast.success('Book added!');
+        toast.success('Book added!', {
+          position: toast.POSITION.TOP_CENTER
+        });
       }
     }
   };  
@@ -176,7 +188,7 @@ const AddBook = ({updateBookData}) => {
             
             <input
               type="text"
-              className="form-control"
+              className="form-control textInput"
               id="searchInput"
               value={searchInput}
               onChange={handleInputChange}
@@ -241,9 +253,6 @@ const AddBook = ({updateBookData}) => {
           
         )}
 
-
-
-
         <div className="row mt-3">
           <div className="col">
           <input
@@ -261,7 +270,9 @@ const AddBook = ({updateBookData}) => {
     setShowResults(false);
   }}
 />   
-            <h6>Add Manually</h6>
+<label className="form-check-label" htmlFor="manual-radio">
+          Add Manually
+        </label>     
           </div>
           <div className="col"></div>
         </div>
@@ -272,7 +283,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-title" className="col-sm-2 col-form-label">Title</label>
     <div className="col-sm-10">
       <input
-        className="form-control"
+        className="form-control textInput"
         type="text"
         id="manual-title"
         value={manualTitle}
@@ -285,7 +296,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-author" className="col-sm-2 col-form-label">Author</label>
     <div className="col-sm-10">
       <input
-        className="form-control"
+        className="form-control textInput"
         type="text"
         id="manual-author"
         value={manualAuthor}
@@ -298,7 +309,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-isbn" className="col-sm-2 col-form-label">ISBN</label>
     <div className="col-sm-10">
       <input
-        className="form-control"
+        className="form-control textInput"
         type="text"
         id="manual-isbn"
         value={manualISBN}
@@ -311,7 +322,7 @@ const AddBook = ({updateBookData}) => {
     <label htmlFor="manual-description" className="col-sm-2 col-form-label">Description</label>
     <div className="col-sm-10">
       <textarea
-        className="form-control"
+        className="form-control textInput"
         id="manual-description"
         rows="3"
         value={manualDescription}
@@ -325,33 +336,46 @@ const AddBook = ({updateBookData}) => {
     <div className="col-sm-10">
       <input
         type="file"
-        className="form-control-file"
+        className="form-control-file textInput"
         id="manual-upload"
         onChange={(e) => setManualCoverFile(e.target.files[0])}
       />
     </div>
   </div>
+  
 </form>
 
           </div>
+          
         )}
-        <div className="row mt-3">
-          <div className="col">
-            <button
-              className="btn-default "
-              onClick={handleAddBook}
-              disabled={!selectedBookId && !manualAdd}>
-              Add
-            </button>
-          </div>
-          <div className="col">
-            <button className="btn-default" onClick={handleCancel}>
-              Cancel
-            </button>
-          </div>
+       
+<div className="d-flex justify-content-center">
+<form>
+  <div className="form-row">
+    <div className="col">
+      <div className="row">
+        <div className="col">
+          <button
+            className="btn-default btn-save-add"
+            onClick={handleAddBook}
+            disabled={!selectedBookId && !manualAdd}
+          >
+            Add
+          </button>
+        </div>
+        <div className="col">
+          <button className="btn-default" onClick={handleCancel}>
+            Cancel
+          </button>
         </div>
       </div>
-      <ToastContainer />
+    </div>
+  </div>
+</form>
+</div>
+
+      </div>
+      <ToastContainer autoClose={1000}/>
       </ContentWrapper>
   );
 };

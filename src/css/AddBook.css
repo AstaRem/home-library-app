@@ -35,7 +35,9 @@ ul{
   margin-top: 1rem;
 }
 
-.AddBook_radio_button_container{
+.AddBook_radio_button_container {
+  display: flex;
+  align-items: center;
   margin-top: 1rem;
 }
 
@@ -44,7 +46,35 @@ ul{
   justify-content: center;
   align-items: center;
 }
-
 .form-check-input {
-  margin-right: 1rem;
+  margin-top: 0.35rem;
+  margin-right: 0.5rem;
+  border-color: #FFAD4D;
+  --bs-border-width: 3px;
+}
+
+.textInput {
+  width:50% !important;
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+}
+.form-check-input:checked {
+  background-color: #FFAD4D;
+  border-color: #FFAD4D;
+}
+
+.form-control:disabled {
+  background-color:#A6A6A6;
+  color: white !important;
+}
+.form-control {
+border: var(--bs-border-width) solid #709F9D;
+--bs-border-width: 3px;
+background-color:#f8f9fa;
+}
+:root {
+--toastify-color-success: #FFAD4D;
+--toastify-color-error: #FFCF26;
 }
