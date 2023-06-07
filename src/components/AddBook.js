@@ -175,6 +175,9 @@ const AddBook = ({updateBookData}) => {
       <div className="add-book">
         <div className="search-container "> 
         <div className="row">
+        <div className="col-2 manual_empty_container">
+   
+   </div>
           <div className="col-6 search_input_wrapper">
             
               <input
@@ -197,7 +200,7 @@ const AddBook = ({updateBookData}) => {
               disabled={manualAdd}
             />
           </div>
-          <div className="col-6 search_button_container">
+          <div className="col-4 search_button_container">
             <button className="btn-default" onClick={handleSearch}> 
               Search
             </button>
@@ -255,6 +258,9 @@ const AddBook = ({updateBookData}) => {
         )}
 
         <div className="row">
+        <div className="col-2 manual_empty_container">
+   
+   </div>
           <div className="col-6 manual_input_wrapper">
           <input
   type="radio"
@@ -275,7 +281,7 @@ const AddBook = ({updateBookData}) => {
           Add Manually
         </label>
 </div> 
-<div className="col-6 manual_empty_container">
+<div className="col-4 manual_empty_container">
    
           </div>
         </div>
