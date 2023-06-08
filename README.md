@@ -61,11 +61,11 @@ When your friend returned the book, click "Returned" button. The book will disap
 
 If you would like to add a new book, all you need to do is click "Add New Book" button or click "Add New Book" navigation link:
 
-![Add new book](src/assets/images/addNew.JPG)
+![Add new book](src/assets/images/addNew22.JPG)
 
 To find book details from database (Google Books API), enter book title, author or ISBN number into the search field and click "Search" button:
 
-![Search by ISBN](src/assets/images/byISBN.JPG)
+![Search by ISBN](src/assets/images/byISBN22.JPG)
 
 Click the radio button next to the book (there might be multiple books displayed when searched by author or title) and click "Add" button. Now your new book details are added to your library catalog:
 
@@ -73,7 +73,7 @@ Click the radio button next to the book (there might be multiple books displayed
 
 If the book can't be found in the database, you can add book details manually: 
 
-![Add manually](src/assets/images/addManual.JPG)
+![Add manually](src/assets/images/addManual22.JPG)
 
 Fill in the details for the book, upload book cover image, click save and the book will be added to your book catalog.
 
