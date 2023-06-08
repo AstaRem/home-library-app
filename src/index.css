@@ -75,5 +75,12 @@ body {
   cursor: default;
   pointer-events: none;
 }
+  
+input[type=text],
+textarea.form-control,
+select.form-control{
+  border: 1px solid var(--secondary-color);
+}
+
 
 

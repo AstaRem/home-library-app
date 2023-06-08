@@ -1,14 +1,21 @@
-.add-book {
+:root {
+  --toastify-color-success: #FFAD4D;
+  --toastify-color-error: #FFCF26;
+  }
+  
+  .add-book {
+  font-family: "Roboto", sans-serif;
   width: 100%;
-  /* height: 100%; */
   border: var(--light-grey) solid 1px;
   border-radius: 20px;
   padding: 20px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #e7efef;
 }
+
 .search_results_container{
-  /* background-color: #F1F1F1;
-  border: var(--light-grey) solid 1px; */
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -27,12 +34,20 @@ ul{
   border: var(--light-grey) solid 1px;
   padding-bottom: 1rem;
   border-radius: 5px;
+  display: flex;
+}
 
+.AddBook_image_container {
+  width: 128px;
+  height: auto;
+  border: 1px solid var(--light-grey);
+  border-radius: 5px;
+  margin-right: 20px;
 }
 
 .AddBook_image_container img{
-  border-radius: 5px;
-  margin-top: 1rem;
+  width: 100%;
+  height: auto;
 }
 
 .AddBook_radio_button_container {
@@ -41,7 +56,35 @@ ul{
   margin-top: 1rem;
 }
 
-.search_button_container, .search_input_wrapper, .manual_input_wrapper, .manual_empty_container  {
+.add-book .search-container {
+  width: 600px;
+  padding-top: 20px;
+}
+
+
+.section_add_manually{
+  margin-top: 40px;
+}
+
+.manual-add-container{
+margin-top: 20px;
+margin-left: 24px;
+}
+
+.addBook_search_input_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#searchInput {
+  margin-right: 20px;
+  border-radius: 25px;
+  width: 350px;
+}
+
+
+.search_button_container, .manual_input_wrapper, .manual_empty_container  {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -57,10 +100,9 @@ padding-top: 3rem;
   align-items: end;
 }
 .form-check-input {
-  margin-top: 0.35rem;
   margin-right: 0.5rem;
   border-color: #FFAD4D;
-  --bs-border-width: 3px;
+  --bs-border-width: 2px;
 }
 .form-check-label {
   font-size: var(--bs-nav-link-font-size);
@@ -68,10 +110,9 @@ padding-top: 3rem;
 }
 .textInput {
   width:80% !important;
-  border-radius: 25px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-top: 15px;
+  margin-bottom: 20px;
 }
 .form-check-input:checked {
   background-color: #FFAD4D;
@@ -82,15 +123,7 @@ padding-top: 3rem;
   background-color:#D9D9D9;
   color: white !important;
 }
-.form-control {
-border: var(--bs-border-width) solid #709F9D;
---bs-border-width: 2px;
-background-color:#f8f9fa;
-}
-:root {
---toastify-color-success: #FFAD4D;
---toastify-color-error: #FFCF26;
-}
+
 .manual_input_wrapper, .manual_empty_container  {
   padding-top: 3rem;
   font-size: 1rem;
@@ -100,4 +133,34 @@ background-color:#f8f9fa;
       line-height: 1.2;
       color: var(--bs-heading-color);
   }
+
+  .label_upload {
+    display: inline-block;
+    width: 160px;
+  }
+
+  .add_man_label{
+    font-weight: 500;
+  }
+
+  .search_results_list li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:  0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+  }
+
+  .addBook_book_title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  
+
   

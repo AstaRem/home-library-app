@@ -173,217 +173,187 @@ const AddBook = ({updateBookData}) => {
   return (
     <ContentWrapper pageTitle="Add New Book"> 
       <div className="add-book">
-        <div className="search-container "> 
-        <div className="row">
-        <div className="col-2 manual_empty_container">
-   
-   </div>
-          <div className="col-6 search_input_wrapper">
+     
+        <div className="search-container"> 
+            <div className="addBook_search_input_wrapper">
+                <input
+                  type="radio"
+                  className="form-check-input"
+                  id="radio-search"
+                  name="radio"
+                  value="search"
+                  checked={!manualAdd}
+                  onChange={() => setManualAdd(false)}
+                />
+              <input
+                type="text"
+                className="form-control"
+                id="searchInput"
+                value={searchInput}
+                onChange={handleInputChange}
+                placeholder="Please enter book title, author or ISBN "
+                disabled={manualAdd}
+              />
+              <button className="btn-default" onClick={handleSearch}> 
+                Search
+              </button>
+            </div>
+          {showResults && (
+            <div className="search_results_container " >
+              <ul className="search_results_list">
+                {books.map((book) => (
+                  <li key={book.id} >
+                  <input
+                        type="radio"
+                        className="form-check-input"
+                        id={`radio-${book.id}`}
+                        name="book"
+                        value={book.id}
+                        checked={selectedBookId === book.id}
+                        onChange={handleRadioChange}
+                      />
+                    <div className="AddBook_image_container col-sm-4 col-md-2">
+                      <img
+                        src={book.coverUrl}
+                        alt={book.title}
+                        className="book-thumbnail"
+                      />
+                    </div>
+                      <div className="AddBook_book_info">
+                        <label className="form-check-label addBook_book_title" htmlFor={`radio-${book.id}`}>
+                          {book.title}
+                        </label>
+                        <p className="card-text">Author(s): {book.authors.join(", ")}</p>
+                        <p className="card-text">ISBN: {book.isbn}</p>
+
+                      </div>
+                    
+                  </li>
+              
+                ))}
+              </ul>
             
+            </div>
+            
+          )}
+
+          <section className="section_add_manually">
+            <div className="search_input_wrapper">
               <input
                 type="radio"
                 className="form-check-input"
-                id="radio-search"
+                id="radio-manual"
                 name="radio"
-                value="search"
-                checked={!manualAdd}
-                onChange={() => setManualAdd(false)}
-              />
-            
-            <input
-              type="text"
-              className="form-control textInput"
-              id="searchInput"
-              value={searchInput}
-              onChange={handleInputChange}
-              placeholder="Please enter book title, author or ISBN "
-              disabled={manualAdd}
-            />
-          </div>
-          <div className="col-4 search_button_container">
-            <button className="btn-default" onClick={handleSearch}> 
-              Search
-            </button>
-          </div>
-        </div>
-                {showResults && (
-          <div className="search_results_container " >
-            <ul className="search_results_list">
-              {books.map((book) => (
-                <li key={book.id} >
-                
-                <div className="row book_row">
-
-                <div className="AddBook_image_container col-sm-4 col-md-2">
-                    <img
-                      src={book.coverUrl}
-                      alt={book.title}
-                      className="book-thumbnail"
-                    />
+                value="manual"
+                checked={manualAdd}
+                onChange={() => {
+                  setManualAdd(true);
+                  setSearchInput('');
+                  setBooks([]);
+                  setSelectedBookId('');
+                  setShowResults(false);
+                }}
+              />   
+              <label className="form-check-label add_man_label" htmlFor="manual-radio">
+                Add Manually
+              </label>
+            </div> 
+            {manualAdd && (
+              <div className="manual-add-container">
+                <form>
+                  <div className="form-group row">
+                    <label htmlFor="manual-title" className="col-sm-2 col-form-label">Title</label>
+                    <div className="col-sm-10">
+                      <input
+                        className="form-control textInput"
+                        type="text"
+                        id="manual-title"
+                        value={manualTitle}
+                        onChange={(e) => setManualTitle(e.target.value)}
+                      />
+                    </div>
                   </div>
 
-                  <div className="form-check AddBook_radio_button_container col-sm-8 col-md-10">
-                    <input
-                      type="radio"
-                      className="form-check-input"
-                      id={`radio-${book.id}`}
-                      name="book"
-                      value={book.id}
-                      checked={selectedBookId === book.id}
-                      onChange={handleRadioChange}
-                    />
-
-                  <div className="AddBook_book_info column">
-
-                    <label className="form-check-label" htmlFor={`radio-${book.id}`}>
-                      {book.title}
-                    </label>
-
-                    <p className="card-text">Author(s): {book.authors.join(", ")}</p>
-                    <p className="card-text">ISBN: {book.isbn}</p>
-
+                  <div className="form-group row">
+                    <label htmlFor="manual-author" className="col-sm-2 col-form-label">Author</label>
+                    <div className="col-sm-10">
+                      <input
+                        className="form-control textInput"
+                        type="text"
+                        id="manual-author"
+                        value={manualAuthor}
+                        onChange={(e) => setManualAuthor(e.target.value)}
+                      />
+                    </div>
                   </div>
+
+                  <div className="form-group row">
+                    <label htmlFor="manual-isbn" className="col-sm-2 col-form-label">ISBN</label>
+                    <div className="col-sm-10">
+                      <input
+                        className="form-control textInput"
+                        type="text"
+                        id="manual-isbn"
+                        value={manualISBN}
+                        onChange={(e) => setManualISBN(e.target.value)}
+                      />
+                    </div>
                   </div>
-                 
 
-                </div>
-                  
-              </li>
-            
-            ))}
-            </ul>
-          
-          </div>
-          
-        )}
+                  <div className="form-group row">
+                    <label htmlFor="manual-description" className="col-sm-2 col-form-label">Description</label>
+                    <div className="col-sm-10">
+                      <textarea
+                        className="form-control textInput"
+                        id="manual-description"
+                        rows="3"
+                        value={manualDescription}
+                        onChange={(e) => setManualDescription(e.target.value)}
+                      ></textarea>
+                    </div>
+                  </div>
 
-        <div className="row">
-        <div className="col-2 manual_empty_container">
-   
-   </div>
-          <div className="col-6 manual_input_wrapper">
-          <input
-  type="radio"
-  className="form-check-input"
-  id="radio-manual"
-  name="radio"
-  value="manual"
-  checked={manualAdd}
-  onChange={() => {
-    setManualAdd(true);
-    setSearchInput('');
-    setBooks([]);
-    setSelectedBookId('');
-    setShowResults(false);
-  }}
-/>   
-<label className="form-check-label" htmlFor="manual-radio">
-          Add Manually
-        </label>
-</div> 
-<div className="col-4 manual_empty_container">
-   
-          </div>
-        </div>
-        {manualAdd && (
-          <div className="manual-add-container mt-3">
+                  <div className="addBook_search_input_wrapper">
+                    <label htmlFor="manual-upload" className="label_upload">Upload Book Cover:</label>
+                      <input
+                        type="file"
+                        className="form-control-file"
+                        id="manual-upload"
+                        onChange={(e) => setManualCoverFile(e.target.files[0])}
+                      />
+                  </div>
+                </form>
+              </div>
+            )}
+          </section>
+        <div className="d-flex justify-content-center">
             <form>
-  <div className="form-group row">
-    <label htmlFor="manual-title" className="col-sm-2 col-form-label">Title</label>
-    <div className="col-sm-10">
-      <input
-        className="form-control textInput"
-        type="text"
-        id="manual-title"
-        value={manualTitle}
-        onChange={(e) => setManualTitle(e.target.value)}
-      />
-    </div>
-  </div>
-
-  <div className="form-group row">
-    <label htmlFor="manual-author" className="col-sm-2 col-form-label">Author</label>
-    <div className="col-sm-10">
-      <input
-        className="form-control textInput"
-        type="text"
-        id="manual-author"
-        value={manualAuthor}
-        onChange={(e) => setManualAuthor(e.target.value)}
-      />
-    </div>
-  </div>
-
-  <div className="form-group row">
-    <label htmlFor="manual-isbn" className="col-sm-2 col-form-label">ISBN</label>
-    <div className="col-sm-10">
-      <input
-        className="form-control textInput"
-        type="text"
-        id="manual-isbn"
-        value={manualISBN}
-        onChange={(e) => setManualISBN(e.target.value)}
-      />
-    </div>
-  </div>
-
-  <div className="form-group row">
-    <label htmlFor="manual-description" className="col-sm-2 col-form-label">Description</label>
-    <div className="col-sm-10">
-      <textarea
-        className="form-control textInput"
-        id="manual-description"
-        rows="3"
-        value={manualDescription}
-        onChange={(e) => setManualDescription(e.target.value)}
-      ></textarea>
-    </div>
-  </div>
-
-  <div className="form-group row">
-    <label htmlFor="manual-upload" className="col-sm-2 col-form-label">Upload Book Cover:</label>
-    <div className="col-sm-10">
-      <input
-        type="file"
-        className="form-control-file textInput"
-        id="manual-upload"
-        onChange={(e) => setManualCoverFile(e.target.files[0])}
-      />
-    </div>
-  </div>
-  
-</form>
-
-          </div>
-          
-        )}
-       </div>
-<div className="d-flex justify-content-center">
-<form>
-  <div className="form-row">
-    <div className="col">
-      <div className="row">
-        <div className="col">
-          <button
-            className="btn-default btn-save-add"
-            onClick={handleAddBook}
-            disabled={!selectedBookId && !manualAdd}
-          >
-            Add
-          </button>
+              <div className="form-row">
+                <div className="col">
+                  <div className="row">
+                    <div className="col">
+                      <button className="btn-default" onClick={handleCancel}>
+                        Cancel
+                      </button>
+                    </div>
+                    <div className="col">
+                      <button
+                        className="btn-default btn-save-add"
+                        onClick={handleAddBook}
+                        disabled={!selectedBookId && !manualAdd}
+                      >
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
         </div>
-        <div className="col">
-          <button className="btn-default" onClick={handleCancel}>
-            Cancel
-          </button>
         </div>
-      </div>
-    </div>
-  </div>
-</form>
-</div>
+       
 
-      </div>
+  </div>
       <ToastContainer autoClose={1000}/>
       </ContentWrapper>
   );

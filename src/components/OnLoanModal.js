@@ -110,7 +110,7 @@ function OnLoan (props){
                               <label htmlFor="name_of_borrower" className="col-form-label">Borrower:</label>
                             </div>
                             <div className="col-sm-9 borrower_input_field">                      
-                              <input className="form-control" id="name_of_borrower" placeholder="Please enter the name of borrower" value={formData.borrower || ""} onChange={inputChange} />
+                            <input type="text" className="form-control" id="name_of_borrower" placeholder="Please enter the name of borrower" value={formData.borrower || ""} onChange={inputChange} />
                             </div>
                       </div>
   
