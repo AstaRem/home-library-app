@@ -65,11 +65,11 @@ If you would like to add a new book, all you need to do is click "Add New Book" 
 
 To find book details from database (Google Books API), enter book title, author or ISBN number into the search field and click "Search" button:
 
-![Aearch by ISBN](src/assets/images/byISBN.JPG)
+![Search by ISBN](src/assets/images/byISBN.JPG)
 
 Click the radio button next to the book (there might be multiple books displayed when searched by author or title) and click "Add" button. Now your new book details are added to your library catalog:
 
-![Book added](src/assets/images/added.JPG)
+![Book added](src/assets/images/added2.JPG)
 
 If the book can't be found in the database, you can add book details manually: 
 
