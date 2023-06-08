@@ -89,7 +89,7 @@ const Home = (props) => {
         <div className="container hero-banner text-center">
           <form id="home_form_book_search" onSubmit={searchLibrary} >
             <div className="row row_input">
-              <div div className="search_input_wrapper">
+              <div className="search_input_wrapper">
                 <span className="reset" onClick={() => resetLibrary()}></span>
                 <input className="form-control" type="text" placeholder="Please enter book title, author or ISBN" aria-label="Search" id="home_search_input" value = {query  || ""} onChange= {(event)=> changeSearchInput(event) }/>
               </div>
@@ -102,7 +102,7 @@ const Home = (props) => {
       <div className="home_btn_wrapper">
       <button type="button" className="btn-default" onClick={() => navigate("/AddBook")}>Add New Book</button>
       </div>
-        <div className="row no-gutters">
+      <div className="row no-gutters">
           {bookList.map((book) => (
                 <BookCard
                 key={book.id}

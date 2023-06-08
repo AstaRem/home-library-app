@@ -59,18 +59,15 @@ input::placeholder {
 .section_library {
     padding: 40px 20px;
     background-color: var(--page-bkgd-color);
+    min-height: 100vh;
 }
 
 .section_library .container {
     background-color: var(--page-bkgd-color);
-    height: 100vh;
 }
 
 .home_btn_wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px 40px 20px;
+    padding: 0 25px 40px 20px;
 }
 
 .message_noResults {
@@ -97,4 +94,20 @@ input::placeholder {
 
 .icn_search_arrow{
     color:var(--middle-grey);
+}
+
+@media screen and (min-width: 350px) {
+    .home_btn_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 766px) {
+    .home_btn_wrapper {
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
 }
