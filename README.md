@@ -35,7 +35,7 @@ You can serch for the book by title, author or ISBN number:
 
 ![search result](src/assets/images/searchLibrary.JPG)
 
-You can see more details about individual book - click on the tree dots in the right bottom corner of the book card, and the modal with book details will be displayed:
+You can see more details about individual book - click on the tree dots in the right bottom corner of the book card, and the modal with book details will be displayed.
 
 If you read the book, you can check "Read" box, give the book your rating (from 1 to 5) and write your notes about the book, your opinion or anything you want to say to yourself about this book. Save results. 
 
@@ -51,13 +51,13 @@ If you would like to borrow a book to friend, click "On Loan" button on the book
 
 Here you can choose the date, when you give the book, write the name of the borrower and save.
 
-On Home screen, the "On Loan" button will become inactive grey - that's hoe you quickly can see the book is not at home. 
+On Home screen, the "On Loan" button will become inactive grey - that's how you quickly can see the book is not at home. 
 
 You also can see the list of the books you have borrowed by clicking "On Loan" navigation link:
 
 ![On Loan List](src/assets/images/OnLoanList.JPG)
 
-When your friend returned the book, click "Returned" button. The book will disappear from this list and in the Home screen "On Loan2 button will become active orange grey again - that's how you visually see the book is at home.
+When your friend returned the book, click "Returned" button. The book will disappear from this list and in the Home screen "On Loan" button will become active orange again - that's how you visually see the book is at home.
 
 If you would like to add a new book, all you need to do is click "Add New Book" button or click "Add New Book" navigation link:
 
@@ -67,7 +67,7 @@ To find book details from database (Google Books API), enter book title, author 
 
 ![Aearch by ISBN](src/assets/images/byISBN.JPG)
 
-Click the radio button next to the book(there might be multiple books displayed when searched by author or title) and click "Add" button. Now your new book details are added to your library catalog:
+Click the radio button next to the book (there might be multiple books displayed when searched by author or title) and click "Add" button. Now your new book details are added to your library catalog:
 
 ![Book added](src/assets/images/added.JPG)
 
